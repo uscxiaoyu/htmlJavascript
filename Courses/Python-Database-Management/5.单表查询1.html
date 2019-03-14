@@ -1,0 +1,735 @@
+<!DOCTYPE html><html><head>
+      <title>5.&#x5355;&#x8868;&#x67E5;&#x8BE2;1</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <style> 
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview.markdown-preview .slides > section:nth-child(1) {
+  background-color: white;
+}
+ 
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview   ">
+      <h2 class="mume-header" id="%E7%AC%AC5%E8%AF%BE-%E5%8D%95%E8%A1%A8%E6%9F%A5%E8%AF%A2">&#x7B2C;5&#x8BFE; &#x5355;&#x8868;&#x67E5;&#x8BE2;</h2>
+
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">use</span> purchase<span class="token punctuation">;</span>
+</pre><h3 class="mume-header" id="1-%E8%AF%AD%E6%B3%95%E7%BB%93%E6%9E%84">1. &#x8BED;&#x6CD5;&#x7ED3;&#x6784;</h3>
+
+<ul>
+<li>&#x5217;&#x51FA;&#x7279;&#x5B9A;&#x5B57;&#x6BB5;&#x540D;&#x5BF9;&#x5E94;&#x6570;&#x636E;&#x7684;&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#x5982;&#x4E0B;:</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> &#x5B57;&#x6BB5;&#x540D;<span class="token number">1</span><span class="token punctuation">,</span> &#x5B57;&#x6BB5;&#x540D;<span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">,</span> &#x5B57;&#x6BB5;&#x540D;n 
+<span class="token keyword">FROM</span> &#x8868;&#x540D;<span class="token punctuation">;</span>
+</pre><h4 class="mume-header" id="%E7%A4%BA%E4%BE%8B1-%E9%80%9A%E8%BF%87%E5%88%97%E5%87%BA%E6%89%80%E6%9C%89%E5%AD%97%E6%AE%B5%E5%90%8D%E6%9F%A5%E8%AF%A2product%E8%A1%A8%E7%9A%84%E6%95%B0%E6%8D%AE">&#x793A;&#x4F8B;1: &#x901A;&#x8FC7;&#x5217;&#x51FA;&#x6240;&#x6709;&#x5B57;&#x6BB5;&#x540D;&#x67E5;&#x8BE2;product&#x8868;&#x7684;&#x6570;&#x636E;</h4>
+
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> product_id<span class="token punctuation">,</span> product_name<span class="token punctuation">,</span> product_code<span class="token punctuation">,</span> product_place<span class="token punctuation">,</span>
+	product_date<span class="token punctuation">,</span> price<span class="token punctuation">,</span> unit<span class="token punctuation">,</span> detail<span class="token punctuation">,</span> subsort_id<span class="token punctuation">,</span> sort_id
+<span class="token keyword">FROM</span> product<span class="token punctuation">;</span>
+</pre><h4 class="mume-header" id="%E8%AF%BE%E5%A0%82%E7%A4%BA%E4%BE%8B2%E9%80%9A%E8%BF%87%E6%9F%A5%E8%AF%A2product%E8%A1%A8%E7%9A%84%E6%89%80%E6%9C%89%E6%95%B0%E6%8D%AE">&#x8BFE;&#x5802;&#x793A;&#x4F8B;2&#xFF1A;&#x901A;&#x8FC7;*&#x67E5;&#x8BE2;product&#x8868;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;</h4>
+
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> product<span class="token punctuation">;</span>
+</pre><h4 class="mume-header" id="%E7%A4%BA%E4%BE%8B3%E6%9F%A5%E8%AF%A2%E6%8C%87%E5%AE%9A%E5%AD%97%E6%AE%B5%E5%AF%B9%E5%BA%94%E7%9A%84%E6%95%B0%E6%8D%AE">&#x793A;&#x4F8B;3&#xFF1A;&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x5B57;&#x6BB5;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;</h4>
+
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> product_id<span class="token punctuation">,</span> product_name<span class="token punctuation">,</span> price
+<span class="token keyword">FROM</span> product<span class="token punctuation">;</span>
+</pre><h3 class="mume-header" id="%E7%BB%83%E4%B9%A01">&#x7EC3;&#x4E60;1&#xFF1A;</h3>
+
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token comment">-- &#x67E5;&#x8BE2;member&#x8868;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;</span>
+
+<span class="token keyword">SELECT</span> user_name<span class="token punctuation">,</span> user_password<span class="token punctuation">,</span> true_name<span class="token punctuation">,</span> sex<span class="token punctuation">,</span> phone<span class="token punctuation">,</span> mobile<span class="token punctuation">,</span> email<span class="token punctuation">,</span> address<span class="token punctuation">,</span> attribute
+<span class="token keyword">FROM</span> member<span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> member<span class="token punctuation">;</span>
+
+<span class="token comment">-- &#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x5B57;&#x6BB5;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;</span>
+<span class="token keyword">SELECT</span> user_name<span class="token punctuation">,</span> address<span class="token punctuation">,</span> email
+<span class="token keyword">FROM</span> member<span class="token punctuation">;</span>
+</pre><h3 class="mume-header" id="2-%E6%8C%89%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2where%E5%AD%90%E5%8F%A5">2. &#x6309;&#x6761;&#x4EF6;&#x67E5;&#x8BE2;(where&#x5B50;&#x53E5;)</h3>
+
+<h4 class="mume-header" id="21-%E5%B8%A6%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E7%AC%A6%E7%9A%84%E6%9F%A5%E8%AF%A2%E5%AF%B9%E6%95%B0%E6%8D%AE%E7%AD%9B%E9%80%89%E8%BF%87%E6%BB%A4">2.1 &#x5E26;&#x5173;&#x7CFB;&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x67E5;&#x8BE2;&#xFF1A;&#x5BF9;&#x6570;&#x636E;&#x7B5B;&#x9009;&#x8FC7;&#x6EE4;</h4>
+
+<ul>
+<li>&#x8BED;&#x6CD5;&#x683C;&#x5F0F;:</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> &#x5B57;&#x6BB5;&#x540D;<span class="token number">1</span><span class="token punctuation">,</span> &#x5B57;&#x6BB5;&#x540D;<span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+<span class="token keyword">FROM</span> &#x8868;&#x540D;
+<span class="token keyword">WHERE</span> &#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;<span class="token punctuation">;</span>
+</pre><ul>
+<li>&#x5E38;&#x89C1;&#x7684;&#x5173;&#x7CFB;&#x8FD0;&#x7B97;&#x7B26;&#x53F7;&#xFF1A;=&#x3001;&lt;&gt;&#x3001;&#xFF01;=&#x3001;&lt;&#x3001;&lt;=&#x3001;&gt;&#x3001;&gt;=</li>
+</ul>
+<h4 class="mume-header" id="%E7%A4%BA%E4%BE%8B4%E6%9F%A5%E8%AF%A2product%E8%A1%A8%E4%B8%ADproduct_place%E4%B8%BA%E5%A4%A9%E6%B4%A5%E7%9A%84%E4%BA%A7%E5%93%81%E4%BF%A1%E6%81%AF">&#x793A;&#x4F8B;4&#xFF1A;&#x67E5;&#x8BE2;product&#x8868;&#x4E2D;Product_Place&#x4E3A;&#x201C;&#x5929;&#x6D25;&#x201D;&#x7684;&#x4EA7;&#x54C1;&#x4FE1;&#x606F;</h4>
+
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> product_place <span class="token operator">=</span> <span class="token string">&apos;&#x5929;&#x6D25;&apos;</span><span class="token punctuation">;</span>
+</pre><h4 class="mume-header" id="%E7%A4%BA%E4%BE%8B5%E4%BD%BF%E7%94%A8select%E8%AF%AD%E5%8F%A5%E6%9F%A5%E8%AF%A2product_name%E4%B8%BA%E4%BA%AC%E7%93%B7km-4030%E5%A4%8D%E5%8D%B0%E6%9C%BA%E7%9A%84%E5%95%86%E5%93%81%E4%BB%B7%E6%A0%BC">&#x793A;&#x4F8B;5&#xFF1A;&#x4F7F;&#x7528;SELECT&#x8BED;&#x53E5;&#x67E5;&#x8BE2;Product_Name&#x4E3A;&#x201C;&#x4EAC;&#x74F7;KM-4030&#x590D;&#x5370;&#x673A;&#x201D;&#x7684;&#x5546;&#x54C1;&#x4EF7;&#x683C;</h4>
+
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> price
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> product_name <span class="token operator">=</span> <span class="token string">&apos;&#x4EAC;&#x74F7;KM-4030&#x590D;&#x5370;&#x673A;&apos;</span><span class="token punctuation">;</span>
+</pre><h4 class="mume-header" id="%E7%A4%BA%E4%BE%8B6%E6%9F%A5%E8%AF%A2product%E8%A1%A8%E4%B8%ADprice-%E5%A4%A7%E4%BA%8E1000%E7%9A%84%E5%95%86%E5%93%81%E4%BB%A3%E7%A0%81%E5%92%8C%E5%90%8D%E7%A7%B0">&#x793A;&#x4F8B;6&#xFF1A;&#x67E5;&#x8BE2;Product&#x8868;&#x4E2D;Price &#x5927;&#x4E8E;1000&#x7684;&#x5546;&#x54C1;&#x4EE3;&#x7801;&#x548C;&#x540D;&#x79F0;</h4>
+
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> product_id<span class="token punctuation">,</span> product_name
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> price <span class="token operator">&gt;=</span> <span class="token number">1000</span><span class="token punctuation">;</span>
+</pre><blockquote>
+<p>&#x6CE8;&#x610F;: &#x5728;SQL&#x4E2D;&#xFF0C;a &lt;= x &lt;= b&#x5E76;&#x4E0D;&#x7B49;&#x4EF7;&#x4E8E; x &gt;= a and x &lt;= b<br>&#x8BF7;&#x6BD4;&#x8F83;&#x4EE5;&#x4E0B;&#x4E24;&#x4E2A;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;:</p>
+</blockquote>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> <span class="token function">COUNT</span><span class="token punctuation">(</span>product_id<span class="token punctuation">)</span>
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> <span class="token number">100</span> <span class="token operator">&lt;=</span> price <span class="token operator">&lt;=</span> <span class="token number">500</span><span class="token punctuation">;</span> <span class="token comment">-- &#x8FD4;&#x56DE;&#x8868;&#x4E2D;&#x7684;&#x8BB0;&#x5F55;&#x6570;, &#x5148;&#x8FD0;&#x7B97;100 &lt;= price&#xFF0C;&#x518D;&#x5C06;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;(true&#x6216;false)&#x4E0E;500&#x8FDB;&#x884C;&#x6BD4;&#x8F83;</span>
+
+<span class="token keyword">SELECT</span> <span class="token function">COUNT</span><span class="token punctuation">(</span>product_id<span class="token punctuation">)</span>
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> price <span class="token operator">&gt;=</span> <span class="token number">100</span> <span class="token operator">AND</span> price <span class="token operator">&lt;=</span> <span class="token number">500</span><span class="token punctuation">;</span>
+</pre><h3 class="mume-header" id="22-%E5%B8%A6in%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E6%9F%A5%E8%AF%A2%E9%99%90%E5%AE%9A%E7%BB%93%E6%9E%9C%E5%9C%A8%E6%9F%90%E4%B8%80%E9%9B%86%E5%90%88%E4%B8%AD">2.2 &#x5E26;in&#x5173;&#x952E;&#x5B57;&#x7684;&#x67E5;&#x8BE2;&#xFF1A;&#x9650;&#x5B9A;&#x7ED3;&#x679C;&#x5728;&#x67D0;&#x4E00;&#x96C6;&#x5408;&#x4E2D;</h3>
+
+<ul>
+<li>&#x8BED;&#x6CD5;&#x683C;&#x5F0F;</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span><span class="token operator">|</span>&#x5B57;&#x6BB5;&#x540D;<span class="token number">1</span><span class="token punctuation">,</span>&#x5B57;&#x6BB5;&#x540D;<span class="token number">2</span><span class="token punctuation">,</span>&#x2026;&#x2026;
+<span class="token keyword">FROM</span> &#x8868;&#x540D;
+<span class="token keyword">WHERE</span> &#x5B57;&#x6BB5;&#x540D; <span class="token punctuation">[</span><span class="token operator">NOT</span><span class="token punctuation">]</span> <span class="token operator">IN</span> <span class="token punctuation">(</span>&#x5143;&#x7D20;<span class="token number">1</span><span class="token punctuation">,</span>&#x5143;&#x7D20;<span class="token number">2</span><span class="token punctuation">,</span>&#x2026;&#x2026;<span class="token punctuation">)</span>
+</pre><h4 class="mume-header" id="%E7%A4%BA%E4%BE%8B7%E6%9F%A5%E6%89%BEproduct%E8%A1%A8%E4%B8%AD%E4%BA%A7%E5%9C%B0%E4%B8%BA%E5%A4%A9%E6%B4%A5%E5%8C%97%E4%BA%AC%E5%92%8C%E6%97%A5%E6%9C%AC%E7%9A%84%E5%95%86%E5%93%81%E7%9A%84%E5%85%A8%E9%83%A8%E4%BF%A1%E6%81%AF">&#x793A;&#x4F8B;7&#xFF1A;&#x67E5;&#x627E;product&#x8868;&#x4E2D;&#x4EA7;&#x5730;&#x4E3A;&#x5929;&#x6D25;&#xFF0C;&#x5317;&#x4EAC;&#x548C;&#x65E5;&#x672C;&#x7684;&#x5546;&#x54C1;&#x7684;&#x5168;&#x90E8;&#x4FE1;&#x606F;</h4>
+
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> product_place <span class="token operator">IN</span> <span class="token punctuation">(</span><span class="token string">&apos;&#x5929;&#x6D25;&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x5317;&#x4EAC;&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x65E5;&#x672C;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><ul>
+<li>&#x8865;&#x5145;&#xFF1A;&#x67E5;&#x627E;product&#x8868;&#x4E2D;&#x4EA7;&#x5730;&#x4E0D;&#x4E3A;&#x5929;&#x6D25;&#xFF0C;&#x5317;&#x4EAC;&#x548C;&#x65E5;&#x672C;&#x7684;&#x5546;&#x54C1;&#x7684;&#x5168;&#x90E8;&#x4FE1;&#x606F;</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> product_place <span class="token operator">NOT</span> <span class="token operator">IN</span> <span class="token punctuation">(</span><span class="token string">&apos;&#x5929;&#x6D25;&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x5317;&#x4EAC;&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x65E5;&#x672C;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><h3 class="mume-header" id="23-%E5%B8%A6between-and%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E6%9F%A5%E8%AF%A2%E9%99%90%E5%AE%9A%E7%BB%93%E6%9E%9C%E5%9C%A8%E6%8C%87%E5%AE%9A%E8%8C%83%E5%9B%B4">2.3 &#x5E26;BETWEEN &#x2026; AND&#x5173;&#x952E;&#x5B57;&#x7684;&#x67E5;&#x8BE2;&#xFF1A;&#x9650;&#x5B9A;&#x7ED3;&#x679C;&#x5728;&#x6307;&#x5B9A;&#x8303;&#x56F4;</h3>
+
+<ul>
+<li>&#x8BED;&#x6CD5;&#x683C;&#x5F0F;</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span><span class="token operator">|</span>{&#x5B57;&#x6BB5;&#x540D;<span class="token number">1</span><span class="token punctuation">,</span>&#x5B57;&#x6BB5;&#x540D;<span class="token number">2</span><span class="token punctuation">,</span>&#x2026;&#x2026;}
+<span class="token keyword">FROM</span> &#x8868;&#x540D; <span class="token keyword">WHERE</span> &#x5B57;&#x6BB5;&#x540D; <span class="token punctuation">[</span><span class="token operator">NOT</span><span class="token punctuation">]</span> <span class="token operator">BETWEEN</span> &#x503C;<span class="token number">1</span> <span class="token operator">AND</span> &#x503C;<span class="token number">2</span><span class="token punctuation">;</span>
+</pre><h4 class="mume-header" id="%E7%A4%BA%E4%BE%8B8%E6%9F%A5%E8%AF%A2prodct%E8%A1%A8%E4%B8%ADprice%E5%80%BC%E5%9C%A8200%E5%92%8C500%E4%B9%8B%E9%97%B4%E7%9A%84%E5%95%86%E5%93%81%E4%BF%A1%E6%81%AF">&#x793A;&#x4F8B;8&#xFF1A;&#x67E5;&#x8BE2;prodct&#x8868;&#x4E2D;Price&#x503C;&#x5728;200&#x548C;500&#x4E4B;&#x95F4;&#x7684;&#x5546;&#x54C1;&#x4FE1;&#x606F;</h4>
+
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> price <span class="token operator">BETWEEN</span> <span class="token number">200</span> <span class="token operator">AND</span> <span class="token number">500</span><span class="token punctuation">;</span>
+</pre><h4 class="mume-header" id="%E7%A4%BA%E4%BE%8B9%E6%9F%A5%E8%AF%A2product%E8%A1%A8%E4%B8%ADprice%E5%80%BC%E4%B8%8D%E5%9C%A8200%E5%92%8C500%E4%B9%8B%E9%97%B4%E7%9A%84%E5%95%86%E5%93%81%E4%BF%A1%E6%81%AF">&#x793A;&#x4F8B;9&#xFF1A;&#x67E5;&#x8BE2;product&#x8868;&#x4E2D;Price&#x503C;&#x4E0D;&#x5728;200&#x548C;500&#x4E4B;&#x95F4;&#x7684;&#x5546;&#x54C1;&#x4FE1;&#x606F;</h4>
+
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> price <span class="token operator">NOT</span> <span class="token operator">BETWEEN</span> <span class="token number">200</span> <span class="token operator">AND</span> <span class="token number">500</span><span class="token punctuation">;</span>
+</pre><h4 class="mume-header" id="24-%E7%A9%BA%E5%80%BC%E6%9F%A5%E8%AF%A2%E5%88%A4%E6%96%AD%E6%9F%90%E4%BA%9B%E5%88%97%E5%80%BC%E6%98%AF%E5%90%A6%E4%B8%BAnull">2.4 &#x7A7A;&#x503C;&#x67E5;&#x8BE2;&#xFF1A;&#x5224;&#x65AD;&#x67D0;&#x4E9B;&#x5217;&#x503C;&#x662F;&#x5426;&#x4E3A;NULL</h4>
+
+<ul>
+<li>&#x8BED;&#x6CD5;&#x7ED3;&#x6784;&#xFF1A;</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span><span class="token operator">|</span>&#x5B57;&#x6BB5;&#x540D;<span class="token number">1</span><span class="token punctuation">,</span>&#x5B57;&#x6BB5;&#x540D;<span class="token number">2</span><span class="token punctuation">,</span>&#x2026;&#x2026;
+<span class="token keyword">FROM</span> &#x8868;&#x540D;
+<span class="token keyword">WHERE</span> &#x5B57;&#x6BB5;&#x540D;<span class="token operator">IS</span> <span class="token punctuation">[</span><span class="token operator">NOT</span><span class="token punctuation">]</span> <span class="token boolean">NULL</span><span class="token punctuation">;</span>
+</pre><h4 class="mume-header" id="%E7%A4%BA%E4%BE%8B10%E6%9F%A5%E8%AF%A2product%E8%A1%A8%E4%B8%ADproduct_place%E4%B8%BA%E7%A9%BA%E5%80%BC%E7%9A%84%E5%95%86%E5%93%81%E5%90%8D%E7%A7%B0%E5%92%8C%E4%BB%B7%E6%A0%BC">&#x793A;&#x4F8B;10&#xFF1A;&#x67E5;&#x8BE2;product&#x8868;&#x4E2D;Product_Place&#x4E3A;&#x7A7A;&#x503C;&#x7684;&#x5546;&#x54C1;&#x540D;&#x79F0;&#x548C;&#x4EF7;&#x683C;</h4>
+
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> product_name<span class="token punctuation">,</span> price
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> product_place <span class="token operator">IS</span> <span class="token boolean">NULL</span><span class="token punctuation">;</span>
+</pre><h4 class="mume-header" id="%E7%A4%BA%E4%BE%8B11%E6%9F%A5%E8%AF%A2product%E8%A1%A8%E4%B8%ADproduct_place%E4%B8%8D%E4%B8%BA%E7%A9%BA%E5%80%BC%E7%9A%84%E8%AE%B0%E5%BD%95">&#x793A;&#x4F8B;11&#xFF1A;&#x67E5;&#x8BE2;product&#x8868;&#x4E2D;Product_Place&#x4E0D;&#x4E3A;&#x7A7A;&#x503C;&#x7684;&#x8BB0;&#x5F55;</h4>
+
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> product_name<span class="token punctuation">,</span> price
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> product_place <span class="token operator">IS</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span><span class="token punctuation">;</span>
+</pre><h3 class="mume-header" id="25-%E5%AD%97%E6%AE%B5%E5%89%8D%E5%B8%A6distinct%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E6%9F%A5%E8%AF%A2%E5%8E%BB%E9%87%8D%E5%A4%8D">2.5 &#x5B57;&#x6BB5;&#x524D;&#x5E26;DISTINCT&#x5173;&#x952E;&#x5B57;&#x7684;&#x67E5;&#x8BE2;&#xFF1A;&#x53BB;&#x91CD;&#x590D;</h3>
+
+<ul>
+<li>&#x8BED;&#x6CD5;&#x683C;&#x5F0F;</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> <span class="token keyword">DISTINCT</span> &#x5B57;&#x6BB5;&#x540D;
+<span class="token keyword">FROM</span> &#x8868;&#x540D;
+<span class="token punctuation">[</span><span class="token keyword">WHERE</span> &#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</pre><h4 class="mume-header" id="%E7%A4%BA%E4%BE%8B12%E6%9F%A5%E8%AF%A2product%E8%A1%A8%E4%B8%ADproduct_place%E5%AD%97%E6%AE%B5%E7%9A%84%E5%80%BC%E6%9F%A5%E8%AF%A2%E8%AE%B0%E5%BD%95%E4%B8%8D%E8%83%BD%E9%87%8D%E5%A4%8D">&#x793A;&#x4F8B;12&#xFF1A;&#x67E5;&#x8BE2;product&#x8868;&#x4E2D;Product_Place&#x5B57;&#x6BB5;&#x7684;&#x503C;&#xFF0C;&#x67E5;&#x8BE2;&#x8BB0;&#x5F55;&#x4E0D;&#x80FD;&#x91CD;&#x590D;</h4>
+
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> <span class="token keyword">DISTINCT</span> product_place
+<span class="token keyword">FROM</span> product<span class="token punctuation">;</span>
+</pre><ul>
+<li>DISTINCT&#x5173;&#x952E;&#x5B57;&#x4F5C;&#x7528;&#x4E8E;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;&#xFF1A;&#x5411;&#x91CF;&#x6BD4;&#x8F83;&#xFF0C;&#x53EA;&#x6709;DISTINCT&#x5173;&#x952E;&#x5B57;&#x540E;&#x6307;&#x5B9A;&#x7684;&#x591A;&#x4E2A;&#x5B57;&#x6BB5;&#x503C;&#x90FD;&#x76F8;&#x540C;&#xFF0C;&#x624D;&#x4F1A;&#x88AB;&#x8BA4;&#x4F5C;&#x662F;&#x91CD;&#x590D;&#x8BB0;&#x5F55;&#x3002;</li>
+</ul>
+<h4 class="mume-header" id="%E7%A4%BA%E4%BE%8B13%E6%89%BE%E5%87%BAproduct%E8%A1%A8%E4%B8%AD%E4%B8%8D%E5%90%8C%E7%9A%84%E6%A0%B9%E7%B1%BB%E5%88%AB%E5%92%8C%E5%AD%90%E7%B1%BB%E5%88%AB%E7%9A%84%E7%BB%84%E5%90%88">&#x793A;&#x4F8B;13&#xFF1A;&#x627E;&#x51FA;product&#x8868;&#x4E2D;&#x4E0D;&#x540C;&#x7684;&#x6839;&#x7C7B;&#x522B;&#x548C;&#x5B50;&#x7C7B;&#x522B;&#x7684;&#x7EC4;&#x5408;</h4>
+
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> <span class="token keyword">DISTINCT</span> sort_id<span class="token punctuation">,</span> subsort_id
+<span class="token keyword">FROM</span> product<span class="token punctuation">;</span>
+</pre><h3 class="mume-header" id="26-%E5%B8%A6like%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E6%9F%A5%E8%AF%A2%E5%88%A4%E6%96%AD%E4%B8%A4%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%98%AF%E5%90%A6%E7%9B%B8%E5%8C%B9%E9%85%8D">2.6 &#x5E26;LIKE&#x5173;&#x952E;&#x5B57;&#x7684;&#x67E5;&#x8BE2;&#x2014;&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x76F8;&#x5339;&#x914D;</h3>
+
+<ul>
+<li>&#x8BED;&#x6CD5;&#x683C;&#x5F0F;</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span><span class="token operator">|</span>{&#x5B57;&#x6BB5;&#x540D;<span class="token number">1</span><span class="token punctuation">,</span>&#x5B57;&#x6BB5;&#x540D;<span class="token number">2</span><span class="token punctuation">,</span>&#x2026;&#x2026;}
+<span class="token keyword">FROM</span> &#x8868;&#x540D;
+<span class="token keyword">WHERE</span> &#x5B57;&#x6BB5;&#x540D; <span class="token punctuation">[</span><span class="token operator">NOT</span><span class="token punctuation">]</span> <span class="token operator">LIKE</span> <span class="token string">&apos;&#x5339;&#x914D;&#x5B57;&#x7B26;&#x4E32;&apos;</span><span class="token punctuation">;</span>
+</pre><ul>
+<li>LIKE&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#x4E2D;&#x7684;&#x201C;&#x5339;&#x914D;&#x5B57;&#x7B26;&#x4E32;&#x201D;&#x6307;&#x5B9A;&#x7528;&#x6765;&#x5339;&#x914D;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5176;&#x503C;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x666E;&#x901A;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x5305;&#x542B;&#x767E;&#x5206;&#x53F7;(%)&#x548C;&#x4E0B;&#x5212;&#x7EBF;(_)&#x7B49;&#x901A;&#x914D;&#x5B57;&#x7B26;&#x4E32;: (1) %: &#x53EF;&#x4EE5;&#x5339;&#x914D;&#x4EFB;&#x610F;&#x957F;&#x5EA6;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5305;&#x62EC;&#x7A7A;&#x5B57;&#x7B26;&#x4E32;; (2) _: &#x4E0B;&#x5212;&#x7EBF;&#x901A;&#x914D;&#x7B26;&#x53EA;&#x5339;&#x914D;&#x5355;&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x5339;&#x914D;&#x591A;&#x4E2A;&#x5B57;&#x7B26;&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x591A;&#x4E2A;&#x4E0B;&#x5212;&#x7EBF;&#x901A;&#x914D;&#x7B26;</li>
+</ul>
+<h4 class="mume-header" id="%E7%A4%BA%E4%BE%8B14%E6%9F%A5%E6%89%BEproduct%E8%A1%A8%E4%B8%AD%E5%95%86%E5%93%81%E5%90%8D%E7%A7%B0%E5%90%AB%E6%9C%89%E5%A4%8D%E5%8D%B0%E6%9C%BA%E7%9A%84%E5%95%86%E5%93%81%E5%90%8D%E7%A7%B0%E4%BB%B7%E6%A0%BC%E5%92%8C%E4%BA%A7%E5%9C%B0">&#x793A;&#x4F8B;14&#xFF1A;&#x67E5;&#x627E;product&#x8868;&#x4E2D;&#x5546;&#x54C1;&#x540D;&#x79F0;&#x542B;&#x6709;&#x590D;&#x5370;&#x673A;&#x7684;&#x5546;&#x54C1;&#x540D;&#x79F0;&#xFF0C;&#x4EF7;&#x683C;&#x548C;&#x4EA7;&#x5730;</h4>
+
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> product_name<span class="token punctuation">,</span> price<span class="token punctuation">,</span> product_place
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> product_name <span class="token operator">LIKE</span> <span class="token string">&apos;%&#x590D;&#x5370;&#x673A;%&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> product_id<span class="token punctuation">,</span> product_name<span class="token punctuation">,</span> price<span class="token punctuation">,</span> product_place
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> product_name <span class="token operator">LIKE</span> <span class="token string">&apos;______&#x590D;&#x5370;&#x673A;&apos;</span><span class="token punctuation">;</span>
+</pre><ul>
+<li>&#x6CE8;&#x610F;&#xFF1A;&#x767E;&#x5206;&#x53F7;&#x548C;&#x4E0B;&#x5212;&#x7EBF;&#x662F;&#x901A;&#x914D;&#x7B26;&#xFF0C;&#x5B83;&#x4EEC;&#x5728;&#x901A;&#x914D;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x6709;&#x7279;&#x6B8A;&#x542B;&#x4E49;&#xFF0C;&#x56E0;&#x6B64;&#xFF0C;&#x5982;&#x679C;&#x8981;&#x5339;&#x914D;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x7684;&#x767E;&#x5206;&#x53F7;&#x548C;&#x4E0B;&#x5212;&#x7EBF;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x5728;&#x901A;&#x914D;&#x5B57;&#x7B26;&#x4E32;&#x4E2D;&#x4F7F;&#x7528;&#x53F3;&#x659C;&#x7EBF;(&#x201C;\&#x201D;)&#x5BF9;&#x767E;&#x5206;&#x53F7;&#x548C;&#x4E0B;&#x5212;&#x7EBF;&#x8FDB;&#x884C;&#x8F6C;&#x4E49;&#xFF0C;&#x4F8B;&#x5982;&#xFF0C;&#x201C;%&#x201D;&#x5339;&#x914D;&#x767E;&#x5206;&#x53F7;&#x5B57;&#x9762;&#x503C;&#xFF0C;&#x201C;_&#x201D;&#x5339;&#x914D;&#x4E0B;&#x5212;&#x7EBF;&#x5B57;&#x9762;&#x503C;&#x3002;</li>
+</ul>
+<h4 class="mume-header" id="%E7%A4%BA%E4%BE%8B15-%E6%89%BE%E5%87%BAproduct%E8%A1%A8%E5%95%86%E5%93%81%E5%90%8D%E7%A7%B0%E5%90%AB%E6%9C%89_%E7%9A%84%E8%AE%B0%E5%BD%95">&#x793A;&#x4F8B;15: &#x627E;&#x51FA;product&#x8868;&#x5546;&#x54C1;&#x540D;&#x79F0;&#x542B;&#x6709;&#x201C;_&#x201D;&#x7684;&#x8BB0;&#x5F55;</h4>
+
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token comment">-- &#x63D2;&#x5165;&#x793A;&#x4F8B;&#x884C;&#x6570;&#x636E;</span>
+<span class="token keyword">INSERT</span> <span class="token keyword">INTO</span> product<span class="token punctuation">(</span>product_id<span class="token punctuation">,</span> product_name<span class="token punctuation">)</span>
+<span class="token keyword">VALUES</span> <span class="token punctuation">(</span><span class="token string">&apos;33&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x7406;&#x5149;_&#x590D;&#x5370;&#x673A;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">(</span><span class="token string">&apos;44&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;&#x7406;&#x5149;%&#x590D;&#x5370;&#x673A;&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SET</span> sql_safe_updates <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+<span class="token keyword">DELETE</span> <span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> product_id <span class="token operator">=</span> <span class="token number">44</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> product_name <span class="token operator">LIKE</span> <span class="token string">&apos;%\%%&apos;</span><span class="token punctuation">;</span>
+</pre><h3 class="mume-header" id="27-%E5%B8%A6and%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E5%A4%9A%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2-%E8%BF%9E%E6%8E%A5%E4%B8%A4%E4%B8%AA%E6%88%96%E8%80%85%E5%A4%9A%E4%B8%AA%E6%9F%A5%E8%AF%A2%E6%9D%A1%E4%BB%B6">2.7 &#x5E26;AND&#x5173;&#x952E;&#x5B57;&#x7684;&#x591A;&#x6761;&#x4EF6;&#x67E5;&#x8BE2;: &#x8FDE;&#x63A5;&#x4E24;&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;</h3>
+
+<ul>
+<li>&#x8BED;&#x6CD5;&#x683C;&#x5F0F;</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span><span class="token operator">|</span>{&#x5B57;&#x6BB5;&#x540D;<span class="token number">1</span><span class="token punctuation">,</span>&#x5B57;&#x6BB5;&#x540D;<span class="token number">2</span><span class="token punctuation">,</span>&#x2026;&#x2026;}
+<span class="token keyword">FROM</span> &#x8868;&#x540D;
+<span class="token keyword">WHERE</span> &#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;<span class="token number">1</span> <span class="token punctuation">[</span>&#x2026;&#x2026; <span class="token operator">AND</span> &#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</pre><h4 class="mume-header" id="%E7%A4%BA%E4%BE%8B16%E6%89%BE%E5%87%BA%E5%95%86%E5%93%81%E5%90%8D%E7%A7%B0%E5%90%AB%E5%A4%8D%E5%8D%B0%E6%9C%BA%E4%B8%94%E4%BA%A7%E5%9C%B0%E5%9C%A8%E5%A4%A9%E6%B4%A5%E7%9A%84%E8%AE%B0%E5%BD%95">&#x793A;&#x4F8B;16&#xFF1A;&#x627E;&#x51FA;&#x5546;&#x54C1;&#x540D;&#x79F0;&#x542B;&#x590D;&#x5370;&#x673A;&#x4E14;&#x4EA7;&#x5730;&#x5728;&#x5929;&#x6D25;&#x7684;&#x8BB0;&#x5F55;</h4>
+
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> product_place <span class="token operator">=</span> <span class="token string">&apos;&#x5929;&#x6D25;&apos;</span> <span class="token operator">AND</span> product_name <span class="token operator">LIKE</span> <span class="token string">&apos;%&#x590D;&#x5370;&#x673A;%&apos;</span><span class="token punctuation">;</span>
+</pre><h4 class="mume-header" id="28-%E5%B8%A6or%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E5%A4%9A%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2-%E8%AE%B0%E5%BD%95%E6%BB%A1%E8%B6%B3%E4%BB%BB%E6%84%8F%E4%B8%80%E4%B8%AA%E6%9D%A1%E4%BB%B6%E5%8D%B3%E8%A2%AB%E6%9F%A5%E5%87%BA">2.8 &#x5E26;OR&#x5173;&#x952E;&#x5B57;&#x7684;&#x591A;&#x6761;&#x4EF6;&#x67E5;&#x8BE2;: &#x8BB0;&#x5F55;&#x6EE1;&#x8DB3;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x6761;&#x4EF6;&#x5373;&#x88AB;&#x67E5;&#x51FA;</h4>
+
+<ul>
+<li>&#x8BED;&#x6CD5;&#x683C;&#x5F0F;</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span><span class="token operator">|</span>{&#x5B57;&#x6BB5;&#x540D;<span class="token number">1</span><span class="token punctuation">,</span>&#x5B57;&#x6BB5;&#x540D;<span class="token number">2</span><span class="token punctuation">,</span>&#x2026;&#x2026;}
+<span class="token keyword">FROM</span> &#x8868;&#x540D;
+<span class="token keyword">WHERE</span> &#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;<span class="token number">1</span> <span class="token punctuation">[</span>&#x2026;&#x2026; <span class="token operator">OR</span> &#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</pre><h4 class="mume-header" id="%E7%A4%BA%E4%BE%8B17%E6%89%BE%E5%87%BAproduct%E4%B8%AD%E5%95%86%E5%93%81%E5%90%8D%E7%A7%B0%E5%90%AB%E5%A4%8D%E5%8D%B0%E6%9C%BA%E6%88%96%E8%BF%87%E8%83%B6%E6%9C%BA%E7%9A%84%E5%95%86%E5%93%81%E8%AE%B0%E5%BD%95">&#x793A;&#x4F8B;17&#xFF1A;&#x627E;&#x51FA;product&#x4E2D;&#x5546;&#x54C1;&#x540D;&#x79F0;&#x542B;&#x2019;&#x590D;&#x5370;&#x673A;&#x2019;&#x6216;&#x2019;&#x8FC7;&#x80F6;&#x673A;&#x2019;&#x7684;&#x5546;&#x54C1;&#x8BB0;&#x5F55;</h4>
+
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token comment">-- &#x9519;&#x8BEF;&#x5199;&#x6CD5;&#xFF0C;&#x6CE8;&#x610F;&#x590D;&#x5408;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x5199;&#x6CD5;</span>
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> product_name <span class="token operator">LIKE</span> <span class="token string">&apos;%&#x590D;&#x5370;&#x673A;%&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> <span class="token string">&apos;%&#x8FC7;&#x80F6;&#x673A;%&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> <span class="token function">count</span><span class="token punctuation">(</span><span class="token operator">*</span><span class="token punctuation">)</span>
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> product_name <span class="token operator">LIKE</span> <span class="token string">&apos;%&#x590D;&#x5370;&#x673A;%&apos;</span> <span class="token operator">OR</span> <span class="token string">&apos;%&#x8FC7;&#x80F6;&#x673A;%&apos;</span><span class="token punctuation">;</span>
+
+<span class="token comment">-- &#x6B63;&#x786E;&#x5199;&#x6CD5;</span>
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> product_name <span class="token operator">LIKE</span> <span class="token string">&apos;%&#x590D;&#x5370;&#x673A;%&apos;</span> <span class="token operator">OR</span> product_name <span class="token operator">LIKE</span> <span class="token string">&apos;%&#x8FC7;&#x80F6;&#x673A;%&apos;</span><span class="token punctuation">;</span>
+
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> <span class="token punctuation">(</span>product_name <span class="token operator">LIKE</span> <span class="token string">&apos;%&#x590D;&#x5370;&#x673A;%&apos;</span><span class="token punctuation">)</span> <span class="token operator">OR</span> <span class="token punctuation">(</span>product_name <span class="token operator">LIKE</span> <span class="token string">&apos;%&#x8FC7;&#x80F6;&#x673A;%&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</pre><pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token comment">-- &#x627E;&#x51FA;product&#x4E2D;&#x5546;&#x54C1;&#x7C7B;&#x522B;&#x4E3A;&#x590D;&#x5370;&#x673A;&#x7684;&#x5546;&#x54C1;&#x8BB0;&#x5F55;</span>
+<span class="token keyword">SELECT</span> a<span class="token punctuation">.</span>product_id<span class="token punctuation">,</span> a<span class="token punctuation">.</span>product_name<span class="token punctuation">,</span> a<span class="token punctuation">.</span>price<span class="token punctuation">,</span> a<span class="token punctuation">.</span>subsort_id<span class="token punctuation">,</span> a<span class="token punctuation">.</span>sort_id
+<span class="token keyword">FROM</span> product a<span class="token punctuation">,</span> subsort b
+<span class="token keyword">WHERE</span> a<span class="token punctuation">.</span>subsort_id <span class="token operator">=</span> b<span class="token punctuation">.</span>subsort_id <span class="token operator">AND</span> b<span class="token punctuation">.</span>subsort_name <span class="token operator">=</span> <span class="token string">&apos;&#x590D;&#x5370;&#x673A;&apos;</span><span class="token punctuation">;</span>
+</pre><ul>
+<li>OR&#x548C;AND&#x5173;&#x952E;&#x5B57;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x7684;&#x60C5;&#x51B5;: AND&#x7684;&#x4F18;&#x5148;&#x7EA7;&#x9AD8;&#x4E8E;OR&#xFF0C;&#x56E0;&#x6B64;&#x5F53;&#x4E24;&#x8005;&#x5728;&#x4E00;&#x8D77;&#x4F7F;&#x7528;&#x65F6;&#xFF0C;&#x5E94;&#x8BE5;&#x5148;&#x8FD0;&#x7B97;AND&#x4E24;&#x8FB9;&#x7684;&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x518D;&#x8FD0;&#x7B97;OR&#x4E24;&#x8FB9;&#x7684;&#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;&#x3002;</li>
+</ul>
+<h4 class="mume-header" id="%E7%A4%BA%E4%BE%8B18-%E6%89%BE%E5%87%BA%E5%95%86%E5%93%81%E5%90%8D%E7%A7%B0%E5%90%AB%E5%A4%8D%E5%8D%B0%E6%9C%BA%E5%92%8C%E8%BF%87%E8%83%B6%E6%9C%BA%E4%B8%94%E4%BA%A7%E5%9C%B0%E4%B8%BA%E5%A4%A9%E6%B4%A5%E7%9A%84%E7%9A%84%E5%95%86%E5%93%81%E8%AE%B0%E5%BD%95">&#x793A;&#x4F8B;18: &#x627E;&#x51FA;&#x5546;&#x54C1;&#x540D;&#x79F0;&#x542B;&#x2019;&#x590D;&#x5370;&#x673A;&#x2019;&#x548C;&#x2019;&#x8FC7;&#x80F6;&#x673A;&#x2019;&#xFF0C;&#x4E14;&#x4EA7;&#x5730;&#x4E3A;&#x5929;&#x6D25;&#x7684;&#x7684;&#x5546;&#x54C1;&#x8BB0;&#x5F55;</h4>
+
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> product_name <span class="token operator">LIKE</span> <span class="token string">&apos;%&#x590D;&#x5370;&#x673A;%&apos;</span> <span class="token operator">AND</span> product_place <span class="token operator">=</span> <span class="token string">&apos;&#x5929;&#x6D25;&apos;</span>
+	<span class="token operator">OR</span> product_name <span class="token operator">LIKE</span> <span class="token string">&apos;%&#x8FC7;&#x80F6;&#x673A;%&apos;</span> <span class="token operator">AND</span> product_place <span class="token operator">=</span> <span class="token string">&apos;&#x5929;&#x6D25;&apos;</span><span class="token punctuation">;</span>
+<span class="token comment">-- &#x7B49;&#x4EF7;&#x4E8E;</span>
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> <span class="token punctuation">(</span>product_name <span class="token operator">LIKE</span> <span class="token string">&apos;%&#x590D;&#x5370;&#x673A;%&apos;</span> <span class="token operator">OR</span> product_name <span class="token operator">LIKE</span> <span class="token string">&apos;%&#x8FC7;&#x80F6;&#x673A;%&apos;</span><span class="token punctuation">)</span> <span class="token operator">AND</span> product_place <span class="token operator">=</span> <span class="token string">&apos;&#x5929;&#x6D25;&apos;</span><span class="token punctuation">;</span>
+
+<span class="token comment">-- &#x4E0D;&#x7B49;&#x4EF7;&#x4E8E;(&#x627E;&#x51FA;&#x4EA7;&#x5730;&#x4E3A;&#x5929;&#x6D25;&#x4E14;&#x5546;&#x54C1;&#x540D;&#x79F0;&#x542B;&#x8FC7;&#x80F6;&#x673A;&#xFF0C;&#x4EE5;&#x53CA;&#x6240;&#x6709;&#x5546;&#x54C1;&#x540D;&#x79F0;&#x542B;&#x590D;&#x5370;&#x673A;&#x7684;&#x5546;&#x54C1;&#x8BB0;&#x5F55;)</span>
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> product_name <span class="token operator">LIKE</span> <span class="token string">&apos;%&#x590D;&#x5370;&#x673A;%&apos;</span> <span class="token operator">OR</span> product_name <span class="token operator">LIKE</span> <span class="token string">&apos;%&#x8FC7;&#x80F6;&#x673A;%&apos;</span> <span class="token operator">AND</span> product_place <span class="token operator">=</span> <span class="token string">&apos;&#x5929;&#x6D25;&apos;</span><span class="token punctuation">;</span>
+
+</pre><h3 class="mume-header" id="29-%E9%99%90%E5%AE%9A%E6%9F%A5%E8%AF%A2%E8%BF%94%E5%9B%9E%E7%9A%84%E8%AE%B0%E5%BD%95%E6%95%B0">2.9 &#x9650;&#x5B9A;&#x67E5;&#x8BE2;&#x8FD4;&#x56DE;&#x7684;&#x8BB0;&#x5F55;&#x6570;</h3>
+
+<ul>
+<li>&#x5F53;&#x4E0D;&#x9700;&#x8981;&#x663E;&#x793A;&#x6240;&#x6709;&#x67E5;&#x8BE2;&#x7ED3;&#x679C;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;LIMIT&#x9650;&#x5B9A;&#x67E5;&#x8BE2;&#x7684;&#x4E2A;&#x6570;, &#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#x4E3A;&#xFF1A;</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span><span class="token operator">|</span>{&#x5B57;&#x6BB5;&#x540D;<span class="token number">1</span><span class="token punctuation">,</span>&#x5B57;&#x6BB5;&#x540D;<span class="token number">2</span><span class="token punctuation">,</span>&#x2026;&#x2026;}
+<span class="token keyword">FROM</span> &#x8868;&#x540D;
+<span class="token keyword">WHERE</span> &#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;<span class="token number">1</span> <span class="token operator">OR</span> <span class="token punctuation">[</span>&#x2026;&#x2026; <span class="token operator">OR</span> &#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;n<span class="token punctuation">]</span>
+	<span class="token keyword">LIMIT</span> m <span class="token punctuation">[</span><span class="token punctuation">,</span>n<span class="token punctuation">]</span><span class="token punctuation">;</span>
+</pre><ul>
+<li>&#x53C2;&#x6570;m&#x4E3A;&#x504F;&#x79FB;&#x91CF;&#xFF08;&#x5373;&#x7B2C;&#x4E00;&#x4E2A;&#x8FD4;&#x56DE;&#x7684;&#x8BB0;&#x5F55;&#x5BF9;&#x5E94;&#x7684;&#x5E8F;&#x53F7;&#xFF09;&#xFF0C;n&#x4E3A;&#x8FD4;&#x56DE;&#x7684;&#x4E2A;&#x6570;</li>
+</ul>
+<h4 class="mume-header" id="%E8%AF%BE%E5%A0%82%E7%A4%BA%E4%BE%8B19-%E6%89%BE%E5%87%BA%E5%89%8D5%E4%B8%AA%E5%95%86%E5%93%81%E5%90%8D%E7%A7%B0%E5%90%AB%E5%A4%8D%E5%8D%B0%E6%9C%BA%E4%B8%94%E4%BA%A7%E5%9C%B0%E4%B8%BA%E5%A4%A9%E6%B4%A5%E7%9A%84%E5%95%86%E5%93%81%E8%AE%B0%E5%BD%95">&#x8BFE;&#x5802;&#x793A;&#x4F8B;19: &#x627E;&#x51FA;&#x524D;5&#x4E2A;&#x5546;&#x54C1;&#x540D;&#x79F0;&#x542B;&#x590D;&#x5370;&#x673A;&#x4E14;&#x4EA7;&#x5730;&#x4E3A;&#x5929;&#x6D25;&#x7684;&#x5546;&#x54C1;&#x8BB0;&#x5F55;</h4>
+
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> product_place <span class="token operator">=</span> <span class="token string">&apos;&#x5929;&#x6D25;&apos;</span> <span class="token operator">AND</span> product_name <span class="token operator">LIKE</span> <span class="token string">&apos;%&#x590D;&#x5370;&#x673A;%&apos;</span> <span class="token keyword">LIMIT</span> <span class="token number">5</span><span class="token punctuation">;</span>
+</pre><h3 class="mume-header" id="210-%E5%B0%86%E6%9F%A5%E8%AF%A2%E7%BB%93%E8%AE%BA%E5%86%99%E5%85%A5%E5%A4%96%E9%83%A8%E6%96%87%E4%BB%B6">2.10 &#x5C06;&#x67E5;&#x8BE2;&#x7ED3;&#x8BBA;&#x5199;&#x5165;&#x5916;&#x90E8;&#x6587;&#x4EF6;</h3>
+
+<ul>
+<li>&#x51C6;&#x5907;&#x5DE5;&#x4F5C;&#xFF1A;&#x627E;&#x5230;&#x2019;C:\ProgramData\MySQL\MySQL Server 5.7\my.ini&#x2019; &#x6587;&#x4EF6;<br>
+&#x5C06;&#x5176;&#x4E2D;&#x7684;&#x53D8;&#x91CF;secure-file-priv&#x7684;&#x503C;&#x8BBE;&#x7F6E;&#x4E3A;&#x7A7A;&quot;&quot;, &#x8BBE;&#x7F6E;&#x597D;&#x4E4B;&#x540E;&#x5373;&#x53EF;&#x5C06;&#x6570;&#x636E;&#x5B58;&#x50A8;&#x5230;&#x4EFB;&#x610F;&#x6587;&#x4EF6;&#x5939;&#x4E0B;</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">SELECT</span> &#x5B57;&#x6BB5;<span class="token number">1</span><span class="token punctuation">,</span> &#x5B57;&#x6BB5;<span class="token number">2</span><span class="token punctuation">,</span> <span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span> <span class="token operator">|</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> &#x8868;&#x540D; 
+<span class="token keyword">WHERE</span> &#x6761;&#x4EF6;&#x8868;&#x8FBE;&#x5F0F;
+<span class="token keyword">INTO</span> <span class="token keyword">OUTFILE</span> <span class="token string">&quot;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;+&#x6587;&#x4EF6;&#x540D;+&#x6269;&#x5C55;&#x540D;&quot;</span> <span class="token keyword">CHARACTER</span> <span class="token keyword">SET</span> &#x5B57;&#x7B26;&#x96C6; 
+FILEDS <span class="token keyword">TERMINATED</span> <span class="token keyword">BY</span> &#x5B57;&#x6BB5;&#x503C;&#x5206;&#x5272;&#x7B26; 
+<span class="token keyword">OPTIONALLY</span> <span class="token keyword">ENCLOSED</span> <span class="token keyword">BY</span> &#x5B57;&#x7B26;&#x4E32;&#x6807;&#x8BC6;&#x7B26; 
+<span class="token keyword">LINES</span> <span class="token keyword">TERMINATED</span> <span class="token keyword">BY</span> &#x6362;&#x884C;&#x7B26;<span class="token punctuation">;</span>
+</pre><p>&#x793A;&#x4F8B;:</p>
+<pre data-role="codeBlock" data-info="SQL" class="language-sql"><span class="token keyword">SELECT</span> product_id<span class="token punctuation">,</span> product_name<span class="token punctuation">,</span> product_place<span class="token punctuation">,</span> price<span class="token punctuation">,</span> sort_id
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> price <span class="token operator">&gt;</span> <span class="token number">100</span>
+<span class="token keyword">INTO</span> <span class="token keyword">OUTFILE</span> <span class="token string">&apos;E:\1.xls&apos;</span> <span class="token keyword">CHARACTER</span> <span class="token keyword">SET</span> gbk
+<span class="token keyword">FIELDS</span> <span class="token keyword">TERMINATED</span> <span class="token keyword">BY</span> <span class="token string">&apos;,&apos;</span>
+<span class="token keyword">OPTIONALLY</span> <span class="token keyword">ENCLOSED</span> <span class="token keyword">BY</span> <span class="token string">&apos;&quot;&apos;</span>
+<span class="token keyword">LINES</span> <span class="token keyword">TERMINATED</span> <span class="token keyword">BY</span> <span class="token string">&apos;\n&apos;</span><span class="token punctuation">;</span>
+</pre><h3 class="mume-header" id="211-%E5%B0%86%E5%A4%96%E9%83%A8%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E5%88%B0mysql%E8%A1%A8%E4%B8%AD">2.11&#x3000;&#x5C06;&#x5916;&#x90E8;&#x6587;&#x4EF6;&#x5199;&#x5165;&#x5230;mysql&#x8868;&#x4E2D;</h3>
+
+<ul>
+<li>
+<p>&#x51C6;&#x5907;&#x5DE5;&#x4F5C;&#xFF1A;&#x6587;&#x672C;&#x6587;&#x4EF6;&#xFF0C;&#x4F8B;&#x5982;E:\1.csv</p>
+</li>
+<li>
+<p>&#x8BED;&#x6CD5;&#x683C;&#x5F0F;</p>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">LOAD</span> <span class="token keyword">DATA</span> <span class="token keyword">INFILE</span> <span class="token string">&quot;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;+&#x6587;&#x4EF6;&#x540D;+&#x6269;&#x5C55;&#x540D;&quot;</span> <span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+<span class="token keyword">INTO</span> <span class="token keyword">TABLE</span> &#x8868;&#x540D; <span class="token keyword">CHARACTER</span> <span class="token keyword">SET</span> &#x5B57;&#x7B26;&#x96C6; <span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+FILEDS <span class="token keyword">TERMINATED</span> <span class="token keyword">BY</span> &#x5B57;&#x6BB5;&#x503C;&#x5206;&#x5272;&#x7B26; <span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+<span class="token keyword">OPTIONALLY</span> <span class="token keyword">ENCLOSED</span> <span class="token keyword">BY</span> &#x5B57;&#x7B26;&#x4E32;&#x6807;&#x8BC6;&#x7B26; <span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+<span class="token keyword">LINES</span> <span class="token keyword">TERMINATED</span> <span class="token keyword">BY</span> &#x6362;&#x884C;&#x7B26;<span class="token punctuation">;</span> <span class="token operator">&lt;</span>br<span class="token operator">&gt;</span>
+</pre><p>&#x793A;&#x4F8B;</p>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token keyword">DROP</span> <span class="token keyword">TABLE</span> P1<span class="token punctuation">;</span>
+<span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> p1 <span class="token keyword">AS</span> <span class="token keyword">SELECT</span> <span class="token operator">*</span> <span class="token keyword">FROM</span> product <span class="token keyword">WHERE</span> <span class="token number">1</span><span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>
+<span class="token keyword">SHOW</span> <span class="token keyword">CREATE</span> <span class="token keyword">TABLE</span> p1<span class="token punctuation">;</span>
+
+<span class="token keyword">LOAD</span> <span class="token keyword">DATA</span> <span class="token keyword">INFILE</span> <span class="token string">&quot;E:\1.CSV&quot;</span>
+<span class="token keyword">INTO</span> <span class="token keyword">TABLE</span> p1 <span class="token keyword">CHARACTER</span> <span class="token keyword">SET</span> gbk
+FILEDS <span class="token keyword">TERMINATED</span> <span class="token keyword">BY</span> <span class="token string">&apos;,&apos;</span>
+<span class="token keyword">OPTIONALLY</span> <span class="token keyword">ENCLOSED</span> <span class="token keyword">BY</span> <span class="token string">&apos;&quot;&apos;</span>
+<span class="token keyword">LINES</span> <span class="token keyword">TERMINATED</span> <span class="token keyword">BY</span> <span class="token string">&apos;\n&apos;</span><span class="token punctuation">;</span>
+</pre><h3 class="mume-header" id="%E7%BB%83%E4%B9%A02">&#x7EC3;&#x4E60;2</h3>
+
+<p>&#x6839;&#x636E;<code>product</code>&#x8868;&#x4E2D;&#x7684;&#x6570;&#x636E;&#x5B8C;&#x6210;&#x4EE5;&#x4E0B;&#x67E5;&#x8BE2;&#xFF1A;</p>
+<ol>
+<li>&#x627E;&#x51FA;&#x96F6;&#x552E;&#x4EF7;&#x5728;500&#x5143;&#x5230;1000&#x5143;&#x7684;&#x5546;&#x54C1;&#x8BB0;&#x5F55;&#xFF0C;&#x663E;&#x793A;Product_ID, Product_Name, Price, Product_Place, SubSort_ID&#x548C;Sort_ID</li>
+<li>&#x627E;&#x51FA;&#x5546;&#x54C1;&#x540D;&#x79F0;&#x4E2D;&#x542B;&#x6709;&#x201C;&#x7406;&#x5149;&#x201D;&#x548C;&#x201C;&#x58A8;&#x7C89;&#x201D;&#x7684;&#x5546;&#x54C1;&#x8BB0;&#x5F55;&#xFF08;&#x7406;&#x5149;&#x516C;&#x53F8;&#x7684;&#x58A8;&#x7C89;&#x4EA7;&#x54C1;&#xFF09;</li>
+<li>&#x627E;&#x51FA;Product_Place&#x4E0D;&#x4E3A;&#x7A7A;&#x7684;&#x8BA1;&#x7B97;&#x5668;&#x5546;&#x54C1;&#x8BB0;&#x5F55;&#xFF0C;&#x663E;&#x793A;10&#x6761;&#x8BB0;&#x5F55;</li>
+<li>&#x627E;&#x51FA;Product_Place&#x7684;&#x4E0D;&#x540C;&#x503C;</li>
+<li>&#x627E;&#x51FA;&#x4EF7;&#x683C;&#x5728;1000&#x5143;&#x4EE5;&#x4E0B;&#x7684;&#x4E66;&#x67DC;&#x548C;&#x4EF7;&#x683C;&#x5728;1000&#x5143;&#x5230;2000&#x5143;&#x4E4B;&#x95F4;&#x7684;&#x4FDD;&#x9669;&#x67DC;&#x5546;&#x54C1;&#x8BB0;&#x5F55;</li>
+</ol>
+<pre data-role="codeBlock" data-info="sql" class="language-sql"><span class="token comment">-- (1) &#x627E;&#x51FA;&#x96F6;&#x552E;&#x4EF7;&#x5728;500&#x5143;&#x5230;1000&#x5143;&#x7684;&#x5546;&#x54C1;&#x8BB0;&#x5F55;&#xFF0C;&#x663E;&#x793A;Product_ID, Product_Name, Price, Product_Place, SubSort_ID</span>
+<span class="token keyword">SELECT</span> product_id<span class="token punctuation">,</span> product_name<span class="token punctuation">,</span> price<span class="token punctuation">,</span> product_place<span class="token punctuation">,</span> subsort_id
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> price <span class="token operator">BETWEEN</span> <span class="token number">500</span> <span class="token operator">AND</span> <span class="token number">1000</span><span class="token punctuation">;</span>
+<span class="token comment">-- &#x6216;&#x8005;</span>
+<span class="token keyword">SELECT</span> product_id<span class="token punctuation">,</span> product_name<span class="token punctuation">,</span> price<span class="token punctuation">,</span> product_place<span class="token punctuation">,</span> subsort_id
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> price <span class="token operator">&gt;=</span> <span class="token number">500</span> <span class="token operator">AND</span> price <span class="token operator">&lt;=</span> <span class="token number">1000</span><span class="token punctuation">;</span>
+<span class="token comment">-- &#x6216;&#x8005;</span>
+<span class="token keyword">SELECT</span> product_id<span class="token punctuation">,</span> product_name<span class="token punctuation">,</span> price<span class="token punctuation">,</span> product_place<span class="token punctuation">,</span> subsort_id
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> <span class="token operator">NOT</span> <span class="token punctuation">(</span>price <span class="token operator">&lt;</span> <span class="token number">500</span> <span class="token operator">OR</span> price <span class="token operator">&gt;</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">-- (2) &#x627E;&#x51FA;&#x5546;&#x54C1;&#x540D;&#x79F0;&#x542B;&#x201C;&#x7406;&#x5149;&#x201D;&#x548C;&#x201C;&#x58A8;&#x7C89;&#x201D;&#x7684;&#x5546;&#x54C1;&#x8BB0;&#x5F55;&#x3002;&#xFF08;&#x7406;&#x5149;&#x516C;&#x53F8;&#x7684;&#x58A8;&#x7C89;&#x4EA7;&#x54C1;&#xFF09;</span>
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> product_name <span class="token operator">LIKE</span> <span class="token string">&apos;%&#x7406;&#x5149;%&apos;</span> <span class="token operator">AND</span> product_name <span class="token operator">LIKE</span> <span class="token string">&apos;%&#x58A8;&#x7C89;%&apos;</span><span class="token punctuation">;</span>
+
+<span class="token comment">-- &#x6216;&#x8005;</span>
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> product_name <span class="token operator">LIKE</span> <span class="token string">&apos;%&#x7406;&#x5149;%&#x58A8;&#x7C89;%&apos;</span> <span class="token operator">OR</span> product_name <span class="token operator">LIKE</span> <span class="token string">&apos;%&#x58A8;&#x7C89;%&#x7406;&#x5149;%&apos;</span><span class="token punctuation">;</span>
+
+
+<span class="token comment">-- (3) &#x627E;&#x51FA;Product_Place&#x4E0D;&#x4E3A;&#x7A7A;&#x7684;&#x8BA1;&#x7B97;&#x5668;&#x5546;&#x54C1;&#x8BB0;&#x5F55;&#xFF0C;&#x663E;&#x793A;10&#x6761;&#x8BB0;&#x5F55;</span>
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> product_place <span class="token operator">IS</span> <span class="token operator">NOT</span> <span class="token boolean">NULL</span>
+<span class="token keyword">LIMIT</span> <span class="token number">10</span><span class="token punctuation">;</span>
+
+<span class="token comment">-- (4) &#x627E;&#x51FA;Product_Place&#x7684;&#x4E0D;&#x540C;&#x503C;</span>
+<span class="token keyword">SELECT</span> <span class="token keyword">DISTINCT</span> product_place
+<span class="token keyword">FROM</span> product<span class="token punctuation">;</span>
+
+<span class="token comment">-- (5) &#x627E;&#x51FA;&#x4EF7;&#x683C;&#x5728;1000&#x5143;&#x4EE5;&#x4E0B;&#x7684;&#x5546;&#x54C1;&#x540D;&#x79F0;&#x542B;&#x4E66;&#x67DC;&#x548C;&#x4EF7;&#x683C;&#x5728;1000&#x5143;&#x5230;2000&#x5143;&#x4E4B;&#x95F4;&#x7684;&#x5546;&#x54C1;&#x540D;&#x79F0;&#x542B;&#x4FDD;&#x9669;&#x67DC;&#x7684;&#x5546;&#x54C1;&#x8BB0;&#x5F55;</span>
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> <span class="token punctuation">(</span>price <span class="token operator">&lt;=</span> <span class="token number">1000</span> <span class="token operator">AND</span> product_name <span class="token operator">LIKE</span> <span class="token string">&apos;%&#x4E66;&#x67DC;%&apos;</span><span class="token punctuation">)</span>
+	<span class="token operator">OR</span> <span class="token punctuation">(</span>price <span class="token operator">BETWEEN</span> <span class="token number">1000</span> <span class="token operator">AND</span> <span class="token number">2000</span> <span class="token operator">AND</span> product_name <span class="token operator">LIKE</span> <span class="token string">&apos;%&#x4FDD;&#x9669;&#x67DC;%&apos;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">-- &#x6216;&#x8005;</span>
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> price <span class="token operator">&lt;=</span> <span class="token number">1000</span> <span class="token operator">AND</span> product_name <span class="token operator">LIKE</span> <span class="token string">&apos;%&#x4E66;&#x67DC;%&apos;</span>
+<span class="token keyword">UNION</span>
+<span class="token keyword">SELECT</span> <span class="token operator">*</span>
+<span class="token keyword">FROM</span> product
+<span class="token keyword">WHERE</span> price <span class="token operator">BETWEEN</span> <span class="token number">1000</span> <span class="token operator">AND</span> <span class="token number">2000</span> <span class="token operator">AND</span> product_name <span class="token operator">LIKE</span> <span class="token string">&apos;%&#x4FDD;&#x9669;&#x67DC;%&apos;</span><span class="token punctuation">;</span>
+</pre>
+      </div>
+      <div class="md-sidebar-toc"><ul>
+<li><a href="#%E7%AC%AC5%E8%AF%BE-%E5%8D%95%E8%A1%A8%E6%9F%A5%E8%AF%A2">&#x7B2C;5&#x8BFE; &#x5355;&#x8868;&#x67E5;&#x8BE2;</a>
+<ul>
+<li><a href="#1-%E8%AF%AD%E6%B3%95%E7%BB%93%E6%9E%84">1. &#x8BED;&#x6CD5;&#x7ED3;&#x6784;</a>
+<ul>
+<li><a href="#%E7%A4%BA%E4%BE%8B1-%E9%80%9A%E8%BF%87%E5%88%97%E5%87%BA%E6%89%80%E6%9C%89%E5%AD%97%E6%AE%B5%E5%90%8D%E6%9F%A5%E8%AF%A2product%E8%A1%A8%E7%9A%84%E6%95%B0%E6%8D%AE">&#x793A;&#x4F8B;1: &#x901A;&#x8FC7;&#x5217;&#x51FA;&#x6240;&#x6709;&#x5B57;&#x6BB5;&#x540D;&#x67E5;&#x8BE2;product&#x8868;&#x7684;&#x6570;&#x636E;</a></li>
+<li><a href="#%E8%AF%BE%E5%A0%82%E7%A4%BA%E4%BE%8B2%E9%80%9A%E8%BF%87%E6%9F%A5%E8%AF%A2product%E8%A1%A8%E7%9A%84%E6%89%80%E6%9C%89%E6%95%B0%E6%8D%AE">&#x8BFE;&#x5802;&#x793A;&#x4F8B;2&#xFF1A;&#x901A;&#x8FC7;*&#x67E5;&#x8BE2;product&#x8868;&#x7684;&#x6240;&#x6709;&#x6570;&#x636E;</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B3%E6%9F%A5%E8%AF%A2%E6%8C%87%E5%AE%9A%E5%AD%97%E6%AE%B5%E5%AF%B9%E5%BA%94%E7%9A%84%E6%95%B0%E6%8D%AE">&#x793A;&#x4F8B;3&#xFF1A;&#x67E5;&#x8BE2;&#x6307;&#x5B9A;&#x5B57;&#x6BB5;&#x5BF9;&#x5E94;&#x7684;&#x6570;&#x636E;</a></li>
+</ul>
+</li>
+<li><a href="#%E7%BB%83%E4%B9%A01">&#x7EC3;&#x4E60;1&#xFF1A;</a></li>
+<li><a href="#2-%E6%8C%89%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2where%E5%AD%90%E5%8F%A5">2. &#x6309;&#x6761;&#x4EF6;&#x67E5;&#x8BE2;(where&#x5B50;&#x53E5;)</a>
+<ul>
+<li><a href="#21-%E5%B8%A6%E5%85%B3%E7%B3%BB%E8%BF%90%E7%AE%97%E7%AC%A6%E7%9A%84%E6%9F%A5%E8%AF%A2%E5%AF%B9%E6%95%B0%E6%8D%AE%E7%AD%9B%E9%80%89%E8%BF%87%E6%BB%A4">2.1 &#x5E26;&#x5173;&#x7CFB;&#x8FD0;&#x7B97;&#x7B26;&#x7684;&#x67E5;&#x8BE2;&#xFF1A;&#x5BF9;&#x6570;&#x636E;&#x7B5B;&#x9009;&#x8FC7;&#x6EE4;</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B4%E6%9F%A5%E8%AF%A2product%E8%A1%A8%E4%B8%ADproduct_place%E4%B8%BA%E5%A4%A9%E6%B4%A5%E7%9A%84%E4%BA%A7%E5%93%81%E4%BF%A1%E6%81%AF">&#x793A;&#x4F8B;4&#xFF1A;&#x67E5;&#x8BE2;product&#x8868;&#x4E2D;Product_Place&#x4E3A;&#x201C;&#x5929;&#x6D25;&#x201D;&#x7684;&#x4EA7;&#x54C1;&#x4FE1;&#x606F;</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B5%E4%BD%BF%E7%94%A8select%E8%AF%AD%E5%8F%A5%E6%9F%A5%E8%AF%A2product_name%E4%B8%BA%E4%BA%AC%E7%93%B7km-4030%E5%A4%8D%E5%8D%B0%E6%9C%BA%E7%9A%84%E5%95%86%E5%93%81%E4%BB%B7%E6%A0%BC">&#x793A;&#x4F8B;5&#xFF1A;&#x4F7F;&#x7528;SELECT&#x8BED;&#x53E5;&#x67E5;&#x8BE2;Product_Name&#x4E3A;&#x201C;&#x4EAC;&#x74F7;KM-4030&#x590D;&#x5370;&#x673A;&#x201D;&#x7684;&#x5546;&#x54C1;&#x4EF7;&#x683C;</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B6%E6%9F%A5%E8%AF%A2product%E8%A1%A8%E4%B8%ADprice-%E5%A4%A7%E4%BA%8E1000%E7%9A%84%E5%95%86%E5%93%81%E4%BB%A3%E7%A0%81%E5%92%8C%E5%90%8D%E7%A7%B0">&#x793A;&#x4F8B;6&#xFF1A;&#x67E5;&#x8BE2;Product&#x8868;&#x4E2D;Price &#x5927;&#x4E8E;1000&#x7684;&#x5546;&#x54C1;&#x4EE3;&#x7801;&#x548C;&#x540D;&#x79F0;</a></li>
+</ul>
+</li>
+<li><a href="#22-%E5%B8%A6in%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E6%9F%A5%E8%AF%A2%E9%99%90%E5%AE%9A%E7%BB%93%E6%9E%9C%E5%9C%A8%E6%9F%90%E4%B8%80%E9%9B%86%E5%90%88%E4%B8%AD">2.2 &#x5E26;in&#x5173;&#x952E;&#x5B57;&#x7684;&#x67E5;&#x8BE2;&#xFF1A;&#x9650;&#x5B9A;&#x7ED3;&#x679C;&#x5728;&#x67D0;&#x4E00;&#x96C6;&#x5408;&#x4E2D;</a>
+<ul>
+<li><a href="#%E7%A4%BA%E4%BE%8B7%E6%9F%A5%E6%89%BEproduct%E8%A1%A8%E4%B8%AD%E4%BA%A7%E5%9C%B0%E4%B8%BA%E5%A4%A9%E6%B4%A5%E5%8C%97%E4%BA%AC%E5%92%8C%E6%97%A5%E6%9C%AC%E7%9A%84%E5%95%86%E5%93%81%E7%9A%84%E5%85%A8%E9%83%A8%E4%BF%A1%E6%81%AF">&#x793A;&#x4F8B;7&#xFF1A;&#x67E5;&#x627E;product&#x8868;&#x4E2D;&#x4EA7;&#x5730;&#x4E3A;&#x5929;&#x6D25;&#xFF0C;&#x5317;&#x4EAC;&#x548C;&#x65E5;&#x672C;&#x7684;&#x5546;&#x54C1;&#x7684;&#x5168;&#x90E8;&#x4FE1;&#x606F;</a></li>
+</ul>
+</li>
+<li><a href="#23-%E5%B8%A6between-and%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E6%9F%A5%E8%AF%A2%E9%99%90%E5%AE%9A%E7%BB%93%E6%9E%9C%E5%9C%A8%E6%8C%87%E5%AE%9A%E8%8C%83%E5%9B%B4">2.3 &#x5E26;BETWEEN &#x2026; AND&#x5173;&#x952E;&#x5B57;&#x7684;&#x67E5;&#x8BE2;&#xFF1A;&#x9650;&#x5B9A;&#x7ED3;&#x679C;&#x5728;&#x6307;&#x5B9A;&#x8303;&#x56F4;</a>
+<ul>
+<li><a href="#%E7%A4%BA%E4%BE%8B8%E6%9F%A5%E8%AF%A2prodct%E8%A1%A8%E4%B8%ADprice%E5%80%BC%E5%9C%A8200%E5%92%8C500%E4%B9%8B%E9%97%B4%E7%9A%84%E5%95%86%E5%93%81%E4%BF%A1%E6%81%AF">&#x793A;&#x4F8B;8&#xFF1A;&#x67E5;&#x8BE2;prodct&#x8868;&#x4E2D;Price&#x503C;&#x5728;200&#x548C;500&#x4E4B;&#x95F4;&#x7684;&#x5546;&#x54C1;&#x4FE1;&#x606F;</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B9%E6%9F%A5%E8%AF%A2product%E8%A1%A8%E4%B8%ADprice%E5%80%BC%E4%B8%8D%E5%9C%A8200%E5%92%8C500%E4%B9%8B%E9%97%B4%E7%9A%84%E5%95%86%E5%93%81%E4%BF%A1%E6%81%AF">&#x793A;&#x4F8B;9&#xFF1A;&#x67E5;&#x8BE2;product&#x8868;&#x4E2D;Price&#x503C;&#x4E0D;&#x5728;200&#x548C;500&#x4E4B;&#x95F4;&#x7684;&#x5546;&#x54C1;&#x4FE1;&#x606F;</a></li>
+<li><a href="#24-%E7%A9%BA%E5%80%BC%E6%9F%A5%E8%AF%A2%E5%88%A4%E6%96%AD%E6%9F%90%E4%BA%9B%E5%88%97%E5%80%BC%E6%98%AF%E5%90%A6%E4%B8%BAnull">2.4 &#x7A7A;&#x503C;&#x67E5;&#x8BE2;&#xFF1A;&#x5224;&#x65AD;&#x67D0;&#x4E9B;&#x5217;&#x503C;&#x662F;&#x5426;&#x4E3A;NULL</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B10%E6%9F%A5%E8%AF%A2product%E8%A1%A8%E4%B8%ADproduct_place%E4%B8%BA%E7%A9%BA%E5%80%BC%E7%9A%84%E5%95%86%E5%93%81%E5%90%8D%E7%A7%B0%E5%92%8C%E4%BB%B7%E6%A0%BC">&#x793A;&#x4F8B;10&#xFF1A;&#x67E5;&#x8BE2;product&#x8868;&#x4E2D;Product_Place&#x4E3A;&#x7A7A;&#x503C;&#x7684;&#x5546;&#x54C1;&#x540D;&#x79F0;&#x548C;&#x4EF7;&#x683C;</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B11%E6%9F%A5%E8%AF%A2product%E8%A1%A8%E4%B8%ADproduct_place%E4%B8%8D%E4%B8%BA%E7%A9%BA%E5%80%BC%E7%9A%84%E8%AE%B0%E5%BD%95">&#x793A;&#x4F8B;11&#xFF1A;&#x67E5;&#x8BE2;product&#x8868;&#x4E2D;Product_Place&#x4E0D;&#x4E3A;&#x7A7A;&#x503C;&#x7684;&#x8BB0;&#x5F55;</a></li>
+</ul>
+</li>
+<li><a href="#25-%E5%AD%97%E6%AE%B5%E5%89%8D%E5%B8%A6distinct%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E6%9F%A5%E8%AF%A2%E5%8E%BB%E9%87%8D%E5%A4%8D">2.5 &#x5B57;&#x6BB5;&#x524D;&#x5E26;DISTINCT&#x5173;&#x952E;&#x5B57;&#x7684;&#x67E5;&#x8BE2;&#xFF1A;&#x53BB;&#x91CD;&#x590D;</a>
+<ul>
+<li><a href="#%E7%A4%BA%E4%BE%8B12%E6%9F%A5%E8%AF%A2product%E8%A1%A8%E4%B8%ADproduct_place%E5%AD%97%E6%AE%B5%E7%9A%84%E5%80%BC%E6%9F%A5%E8%AF%A2%E8%AE%B0%E5%BD%95%E4%B8%8D%E8%83%BD%E9%87%8D%E5%A4%8D">&#x793A;&#x4F8B;12&#xFF1A;&#x67E5;&#x8BE2;product&#x8868;&#x4E2D;Product_Place&#x5B57;&#x6BB5;&#x7684;&#x503C;&#xFF0C;&#x67E5;&#x8BE2;&#x8BB0;&#x5F55;&#x4E0D;&#x80FD;&#x91CD;&#x590D;</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B13%E6%89%BE%E5%87%BAproduct%E8%A1%A8%E4%B8%AD%E4%B8%8D%E5%90%8C%E7%9A%84%E6%A0%B9%E7%B1%BB%E5%88%AB%E5%92%8C%E5%AD%90%E7%B1%BB%E5%88%AB%E7%9A%84%E7%BB%84%E5%90%88">&#x793A;&#x4F8B;13&#xFF1A;&#x627E;&#x51FA;product&#x8868;&#x4E2D;&#x4E0D;&#x540C;&#x7684;&#x6839;&#x7C7B;&#x522B;&#x548C;&#x5B50;&#x7C7B;&#x522B;&#x7684;&#x7EC4;&#x5408;</a></li>
+</ul>
+</li>
+<li><a href="#26-%E5%B8%A6like%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E6%9F%A5%E8%AF%A2%E5%88%A4%E6%96%AD%E4%B8%A4%E4%B8%AA%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%98%AF%E5%90%A6%E7%9B%B8%E5%8C%B9%E9%85%8D">2.6 &#x5E26;LIKE&#x5173;&#x952E;&#x5B57;&#x7684;&#x67E5;&#x8BE2;&#x2014;&#x5224;&#x65AD;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x662F;&#x5426;&#x76F8;&#x5339;&#x914D;</a>
+<ul>
+<li><a href="#%E7%A4%BA%E4%BE%8B14%E6%9F%A5%E6%89%BEproduct%E8%A1%A8%E4%B8%AD%E5%95%86%E5%93%81%E5%90%8D%E7%A7%B0%E5%90%AB%E6%9C%89%E5%A4%8D%E5%8D%B0%E6%9C%BA%E7%9A%84%E5%95%86%E5%93%81%E5%90%8D%E7%A7%B0%E4%BB%B7%E6%A0%BC%E5%92%8C%E4%BA%A7%E5%9C%B0">&#x793A;&#x4F8B;14&#xFF1A;&#x67E5;&#x627E;product&#x8868;&#x4E2D;&#x5546;&#x54C1;&#x540D;&#x79F0;&#x542B;&#x6709;&#x590D;&#x5370;&#x673A;&#x7684;&#x5546;&#x54C1;&#x540D;&#x79F0;&#xFF0C;&#x4EF7;&#x683C;&#x548C;&#x4EA7;&#x5730;</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B15-%E6%89%BE%E5%87%BAproduct%E8%A1%A8%E5%95%86%E5%93%81%E5%90%8D%E7%A7%B0%E5%90%AB%E6%9C%89_%E7%9A%84%E8%AE%B0%E5%BD%95">&#x793A;&#x4F8B;15: &#x627E;&#x51FA;product&#x8868;&#x5546;&#x54C1;&#x540D;&#x79F0;&#x542B;&#x6709;&#x201C;_&#x201D;&#x7684;&#x8BB0;&#x5F55;</a></li>
+</ul>
+</li>
+<li><a href="#27-%E5%B8%A6and%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E5%A4%9A%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2-%E8%BF%9E%E6%8E%A5%E4%B8%A4%E4%B8%AA%E6%88%96%E8%80%85%E5%A4%9A%E4%B8%AA%E6%9F%A5%E8%AF%A2%E6%9D%A1%E4%BB%B6">2.7 &#x5E26;AND&#x5173;&#x952E;&#x5B57;&#x7684;&#x591A;&#x6761;&#x4EF6;&#x67E5;&#x8BE2;: &#x8FDE;&#x63A5;&#x4E24;&#x4E2A;&#x6216;&#x8005;&#x591A;&#x4E2A;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;</a>
+<ul>
+<li><a href="#%E7%A4%BA%E4%BE%8B16%E6%89%BE%E5%87%BA%E5%95%86%E5%93%81%E5%90%8D%E7%A7%B0%E5%90%AB%E5%A4%8D%E5%8D%B0%E6%9C%BA%E4%B8%94%E4%BA%A7%E5%9C%B0%E5%9C%A8%E5%A4%A9%E6%B4%A5%E7%9A%84%E8%AE%B0%E5%BD%95">&#x793A;&#x4F8B;16&#xFF1A;&#x627E;&#x51FA;&#x5546;&#x54C1;&#x540D;&#x79F0;&#x542B;&#x590D;&#x5370;&#x673A;&#x4E14;&#x4EA7;&#x5730;&#x5728;&#x5929;&#x6D25;&#x7684;&#x8BB0;&#x5F55;</a></li>
+<li><a href="#28-%E5%B8%A6or%E5%85%B3%E9%94%AE%E5%AD%97%E7%9A%84%E5%A4%9A%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2-%E8%AE%B0%E5%BD%95%E6%BB%A1%E8%B6%B3%E4%BB%BB%E6%84%8F%E4%B8%80%E4%B8%AA%E6%9D%A1%E4%BB%B6%E5%8D%B3%E8%A2%AB%E6%9F%A5%E5%87%BA">2.8 &#x5E26;OR&#x5173;&#x952E;&#x5B57;&#x7684;&#x591A;&#x6761;&#x4EF6;&#x67E5;&#x8BE2;: &#x8BB0;&#x5F55;&#x6EE1;&#x8DB3;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x6761;&#x4EF6;&#x5373;&#x88AB;&#x67E5;&#x51FA;</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B17%E6%89%BE%E5%87%BAproduct%E4%B8%AD%E5%95%86%E5%93%81%E5%90%8D%E7%A7%B0%E5%90%AB%E5%A4%8D%E5%8D%B0%E6%9C%BA%E6%88%96%E8%BF%87%E8%83%B6%E6%9C%BA%E7%9A%84%E5%95%86%E5%93%81%E8%AE%B0%E5%BD%95">&#x793A;&#x4F8B;17&#xFF1A;&#x627E;&#x51FA;product&#x4E2D;&#x5546;&#x54C1;&#x540D;&#x79F0;&#x542B;&#x2019;&#x590D;&#x5370;&#x673A;&#x2019;&#x6216;&#x2019;&#x8FC7;&#x80F6;&#x673A;&#x2019;&#x7684;&#x5546;&#x54C1;&#x8BB0;&#x5F55;</a></li>
+<li><a href="#%E7%A4%BA%E4%BE%8B18-%E6%89%BE%E5%87%BA%E5%95%86%E5%93%81%E5%90%8D%E7%A7%B0%E5%90%AB%E5%A4%8D%E5%8D%B0%E6%9C%BA%E5%92%8C%E8%BF%87%E8%83%B6%E6%9C%BA%E4%B8%94%E4%BA%A7%E5%9C%B0%E4%B8%BA%E5%A4%A9%E6%B4%A5%E7%9A%84%E7%9A%84%E5%95%86%E5%93%81%E8%AE%B0%E5%BD%95">&#x793A;&#x4F8B;18: &#x627E;&#x51FA;&#x5546;&#x54C1;&#x540D;&#x79F0;&#x542B;&#x2019;&#x590D;&#x5370;&#x673A;&#x2019;&#x548C;&#x2019;&#x8FC7;&#x80F6;&#x673A;&#x2019;&#xFF0C;&#x4E14;&#x4EA7;&#x5730;&#x4E3A;&#x5929;&#x6D25;&#x7684;&#x7684;&#x5546;&#x54C1;&#x8BB0;&#x5F55;</a></li>
+</ul>
+</li>
+<li><a href="#29-%E9%99%90%E5%AE%9A%E6%9F%A5%E8%AF%A2%E8%BF%94%E5%9B%9E%E7%9A%84%E8%AE%B0%E5%BD%95%E6%95%B0">2.9 &#x9650;&#x5B9A;&#x67E5;&#x8BE2;&#x8FD4;&#x56DE;&#x7684;&#x8BB0;&#x5F55;&#x6570;</a>
+<ul>
+<li><a href="#%E8%AF%BE%E5%A0%82%E7%A4%BA%E4%BE%8B19-%E6%89%BE%E5%87%BA%E5%89%8D5%E4%B8%AA%E5%95%86%E5%93%81%E5%90%8D%E7%A7%B0%E5%90%AB%E5%A4%8D%E5%8D%B0%E6%9C%BA%E4%B8%94%E4%BA%A7%E5%9C%B0%E4%B8%BA%E5%A4%A9%E6%B4%A5%E7%9A%84%E5%95%86%E5%93%81%E8%AE%B0%E5%BD%95">&#x8BFE;&#x5802;&#x793A;&#x4F8B;19: &#x627E;&#x51FA;&#x524D;5&#x4E2A;&#x5546;&#x54C1;&#x540D;&#x79F0;&#x542B;&#x590D;&#x5370;&#x673A;&#x4E14;&#x4EA7;&#x5730;&#x4E3A;&#x5929;&#x6D25;&#x7684;&#x5546;&#x54C1;&#x8BB0;&#x5F55;</a></li>
+</ul>
+</li>
+<li><a href="#210-%E5%B0%86%E6%9F%A5%E8%AF%A2%E7%BB%93%E8%AE%BA%E5%86%99%E5%85%A5%E5%A4%96%E9%83%A8%E6%96%87%E4%BB%B6">2.10 &#x5C06;&#x67E5;&#x8BE2;&#x7ED3;&#x8BBA;&#x5199;&#x5165;&#x5916;&#x90E8;&#x6587;&#x4EF6;</a></li>
+<li><a href="#211-%E5%B0%86%E5%A4%96%E9%83%A8%E6%96%87%E4%BB%B6%E5%86%99%E5%85%A5%E5%88%B0mysql%E8%A1%A8%E4%B8%AD">2.11&#x3000;&#x5C06;&#x5916;&#x90E8;&#x6587;&#x4EF6;&#x5199;&#x5165;&#x5230;mysql&#x8868;&#x4E2D;</a></li>
+<li><a href="#%E7%BB%83%E4%B9%A02">&#x7EC3;&#x4E60;2</a></li>
+</ul>
+</li>
+</ul>
+</div>
+      <a id="sidebar-toc-btn">&#x2261;</a>
+    
+    
+    
+    
+    
+    
+    
+    
+<script>
+
+var sidebarTOCBtn = document.getElementById('sidebar-toc-btn')
+sidebarTOCBtn.addEventListener('click', function(event) {
+  event.stopPropagation()
+  if (document.body.hasAttribute('html-show-sidebar-toc')) {
+    document.body.removeAttribute('html-show-sidebar-toc')
+  } else {
+    document.body.setAttribute('html-show-sidebar-toc', true)
+  }
+})
+</script>
+<p align="center">
+  <a href="4.添加数据.html">上一讲</a>
+  <a href="主要内容.html">返回目录</a>
+  <a href="6.单表查询2.html">下一讲</a>
+</p>
+  
+    </body></html>
