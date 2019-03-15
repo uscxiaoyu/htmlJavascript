@@ -1,0 +1,67 @@
+h1 {
+    color: black;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 60px;
+    text-align: center;
+}
+
+h2 {
+    background-color: hsl(180, 72%, 41%);
+    line-height: 40px;
+    padding-left: 5px
+}
+
+h3 {
+    color:black;
+    font-family: 'Times New Roman', Times, serif;
+    background: rgb(114, 209, 209);
+    line-height: 40px;
+    padding-left: 5px;
+}
+
+tb {
+    text-align: center;
+    background: gray;
+}
+
+ul li {
+    color: black;
+}
+
+p {
+    text-indent: 2pt;
+}
+
+table {
+    background: rgb(233, 226, 226);
+}
+
+.f {
+    color: black;
+}
+
+/*类选择器，全局可有多个*/
+#o {
+    font-size: 20px
+}
+
+/*id选择器，全局id唯一*/
+.container {
+    margin: 0 auto;
+    width: 800px;
+}
+
+.contact {
+    text-align: left;
+    /* background: #c7c2c2; */
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(29, 38, 175);
+}
+
+a:hover {
+    color: #636060
+}
