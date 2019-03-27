@@ -49,6 +49,7 @@ table {
 .container {
     margin: 0 auto;
     width: 800px;
+    line-height: 30px;
 }
 
 .contact {

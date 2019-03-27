@@ -1,146 +1,237 @@
 <!DOCTYPE html>
-<html lang="ch">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>肖宇的主页</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- <style> 
-        a:hover{
-            color: #636060
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        html, body {
+            background-color: #afaea8;
+            margin: 10px;
         }
-    </style> -->
+        .container > div {
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            line-height: 30pt;
+            font-size: 1.5em;
+            color: rgb(34, 25, 25);
+            padding: 60px;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr); /*分成三等分, 1fr 1fr 1fr*/
+            grid-template-rows: repeat(7, auto);
+            /* grid-template-areas: 
+                ". m h h h h h ."
+                ". m c c c c c ."
+                ". m c c c c c ."
+                ". m c c c c c ."
+                ". m c c c c c ."
+                ". m f f f f f ."
+                ; */
+            /* grid-auto-rows: minmax(100px, 1fr); */
+            grid-gap: 40px;
+            /* margin: 0 auto; */
+        }
+        .header{
+            text-align: center;
+            align-items: center;
+            grid-column: 2/-2;
+            grid: row 1;
+            /* grid-area: h; */
+            background-color: ivory;
+        }
+        /* .header-img{
+            align-items: center;
+            grid-column: 4/-2;
+            grid: row 1;
+            background-image: url(./image/usc_1.jpg) ;
+        } */
+        /* .menu{
+            grid-area: m;
+            grid-column: 2;
+            grid-row: 1/-2;
+            text-align: center;
+            background-color: ivory;
+        } */
+        .content{
+            /* grid-area: c; */
+            grid-column: 2/-2;
+            background-color: ivory;
+            /* padding: 20px; */
+        }
+        .footer{
+            /* grid-area: f; */
+            grid-column: 2/-2;
+            grid-row: -1;
+            text-align: center;
+            background-color: ivory;
+        }
+        .contact{
+            text-align: center;
+        }
+        h1 {
+            color: rgb(41, 31, 31);
+            font-family: 'Franklin Gothic Medium';
+            font-size: 80px;
+            text-align: left;
+        }
+
+        h2 {
+            background-color: hsl(180, 72%, 41%);
+            text-align: center;
+            line-height: 40px;
+            padding: 10px;
+        }
+
+        h3 {
+            color:black;
+            font-family: 'Times New Roman', Times, serif;
+            background: rgb(114, 209, 209);
+            line-height: 40px;
+            padding: 10px;
+        }
+            </style>
 </head>
 <body>
     <div class="container">
-        <h1>肖  宇</h1>
-        <div class="contact">
-            <p id="o">管理学博士 上海对外经贸大学信息管理系 副教授</p>
-            <p class="f">021-67703578</p>
-            <p class="f">jxndtbxiaoyu@163.com</p>
+        <div class="header">
+                <h1>肖  宇</h1>
+                <div class="contact" style="text-align:left">
+                    <p id="o">管理学博士<br>上海对外经贸大学信息管理系 副教授</p>
+                    <p class="f">021-67703578<br>jxndtbxiaoyu@163.com</p>
+                </div>
+        </div>
+        <!-- <div class="header-img"></div> -->
+        <!-- <div class="menu">menu</div> -->
+        <div class="content">
+            <h2><b>工作经历</b></h2><br>
+                <table width="100%">
+                    <tr>
+                        <td><b>时间</b></td>
+                        <td><b>单位</b></td>
+                        <td><b>职称</b></td>
+                    </tr>
+                    <tr>
+                        <td>2019-01-01至今</td>
+                        <td>上海对外经贸大学，信息管理系</td>
+                        <td>副教授</td>
+                    </tr>
+                    <tr>
+                        <td>2015-09-10至2018-12-31</td>
+                        <td>上海对外经贸大学，信息管理系</td>
+                        <td>讲师</td>
+                    </tr>
+                </table>
+
+        </div>
+        <div class="content">
+            <h2 style="color:black"><b>教育背景</b></h2><br>
+                <table width="100%">
+                    <tr>
+                        <td><b>时间</b></td>
+                        <td><b>单位</b></td>
+                        <td><b>学位</b></td>
+                        <td><b>证明人</b></td>
+                    </tr>
+                    <tr>
+                        <td>2011-09-01至2015-06-31</td>
+                        <td>上海财经大学</td>
+                        <td>管理学博士</td>
+                        <td>韩景倜教授</td>
+                    </tr>
+                    <tr>
+                        <td>2013-10-01至2014-09-31</td>
+                        <td>University of Southern California</td>
+                        <td>Visiting scholar</td>
+                        <td>Pro. Thomas W. Valente</td>
+                    </tr>
+                    <tr>
+                        <td>2009-09-01至2011-06-31</td>
+                        <td>上海财经大学</td>
+                        <td>管理学硕士</td>
+                        <td>李艳红副教授</td>
+                    </tr>
+                    <tr>
+                    <td>2005-09-1至2009-06-31</td>
+                        <td>杭州电子科技大学</td>
+                        <td>管理学学士</td>
+                        <td>周涛教授</td>
+                    </tr>
+                </table>
         </div>
 
-        <!-- <img src="image/usc_1.JPG" alt="图片不存在" width="200px"> -->
-        <!-- <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1551955149616&di=ce8ce5b12abb90ea670399302d6b14c6&imgtype=0&src=http%3A%2F%2Fimg2.ph.126.net%2Ffsfe3KKNs8PpA5lq-AILHA%3D%3D%2F653584895939183573.jpg" alt="" width="200px"> -->
-        <!-- <a href="index-en.html">Swich to English Version</a> -->
-    
-    <h2><b>工作经历</b></h2><br>
-    <table>
-        <tr>
-            <td><b>时间</b></td>
-            <td><b>单位</b></td>
-            <td><b>职称</b></td>
-        </tr>
-        <tr>
-            <td>2019-01-01至今</td>
-            <td>上海对外经贸大学，信息管理系</td>
-            <td>副教授</td>
-        </tr>
-        <tr>
-            <td>2015-09-10至2018-12-31</td>
-            <td>上海对外经贸大学，信息管理系</td>
-            <td>讲师</td>
-        </tr>
-    </table>
-    <hr>
-    <h2 style="color:black"><b>教育背景</b></h2><br>
-        <table>
-            <tr>
-                <td><b>时间</b></td>
-                <td><b>单位</b></td>
-                <td><b>学位</b></td>
-                <td><b>证明人</b></td>
-            </tr>
-            <tr>
-                <td>2011-09-01至2015-06-31</td>
-                <td>上海财经大学</td>
-                <td>管理学博士</td>
-                <td>韩景倜教授</td>
-            </tr>
-            <tr>
-                <td>2013-10-01至2014-09-31</td>
-                <td>University of Southern California</td>
-                <td>Visiting scholar</td>
-                <td>Pro. Thomas W. Valente</td>
-            </tr>
-            <tr>
-                <td>2009-09-01至2011-06-31</td>
-                <td>上海财经大学</td>
-                <td>管理学硕士</td>
-                <td>李艳红副教授</td>
-            </tr>
-            <tr>
-            <td>2005-09-1至2009-06-31</td>
-                <td>杭州电子科技大学</td>
-                <td>管理学学士</td>
-                <td>周涛教授</td>
-            </tr>
-        </table>
-    <hr>
+        <div class="content">
+            <h2><b>研究经历</b></h2>
+                <h3>发表论文</h3>
+                    <ol>
+                        <li>
+                            <b>Yu Xiao#*</b>, Jingti Han. <a href="https://www.sciencedirect.com/science/article/pii/S0040162516000202">Forecasting
+                                new product diffusion with agent-based models.</a> Technological Forecasting & Social Change, 2016(105): 167-178.
+                        </li>
+                        <li>
+                            <b>肖宇#</b>, 韩景倜. <a href="http://www.cnki.net/kcms/doi/10.13306/j.1672-3813.2016.03.007.html">异质阈值决策规则下的复杂网络扩散</a>[J].
+                                复杂系统与复杂性科学, 2016(3): 47-57.</li>
+                        <li>
+                            <b>肖宇#*</b>, 韩景倜, 韩小妹. <a href="http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFDLAST2017&filename=GCXT201704021&uid=WEEvREcwSlJHSldRa1FhcTdWa2JJc0FRK05YYy9sbTFPSFVWdlZwOUlOND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!&v=MjAyMzM0OUhaWVI4ZVgxTHV4WVM3RGgxVDNxVHJXTTFGckNVUkxPZlpPZHJGeXJtVTd2UElpN1Rlckc0SDliTXE=">一种判定多智能体系统状态更新有序性的方法</a>
+                            [J].系统工程, 2017, 35(4): 143- 148.
+                        </li>
+                        <li>
+                            韩景倜, <b>肖宇*</b>. <a href="http://www.cims-journal.cn/CN/10.13196/j.cims.2015.06.002">复杂产品研发的网络建模分析</a>[J]. 计算机集成制造系统,
+                            2015(6): 1417-1427.
+                        </li>
+                        <li>
+                            <b>Xiao Y.#*</b>, Han J. (2014) <a href="https://link.springer.com/chapter/10.1007/978-3-642-55355-4_34"> Value Model of Knowledge Diffusion in High Technology Innovation Networks.</a> In: Liu K., Gulliver
+                                S.R., Li W., Yu C. (eds) Service Science and Knowledge Innovation. ICISO 2014. IFIP Advances in Information and
+                                Communication Technology, vol 426: 331-339. Springer, Berlin, Heidelberg
+                        </li>
+                    </ol>
+                <h3>项目经历</h3>
+                    <ol>
+                        <li>
+                            <b>教育部人文社科青年基金项目，18YJC630205，面向创新扩散预测的人工社会构建关键方法研究，2019/1-2021/12，经费8万，在研，主持</b>
+                        </li>
+                        <li>
+                            上海市哲学社会科学规划一般课题，2018BGL023，创业人才的心智特征及其神经学实验观测研究，2019.01-2020.12，经费8万元，在研，参与
+                        </li>
+                        <li>
+                            上海市哲学社会科学规划青年课题，2018EGL016，基于线上线下耦合网络的创意源扩散机理及促进策略研究，2019/1-2020/12，经费6万，上海市哲社办，在研，参与
+                        </li>
+                        <li>
+                            <b>上海高校青年教师培养资助计划项目，ZZSUIBE16009，网络扩散模型的拟合及其在市场增长预测中的应用，2017.01-2018.12，经费4万元，上海市教委，结项，主持</b>
+                        </li>
+                        <li>
+                            国家自然科学基金青年项目，71602112，资本市场中的社会关系及其经济后果：基于市场参与者个人层面的研究， 2017.01-2019.12，经费17万元，国家自然科学基金委，在研，参与
+                        </li>
+                        <li>
+                            国家自然科学基金面试项目，71271126，应急保障网络的控制与效能分析， 2013/1-2016/12，经费48万，已结题，参加
+                        </li>
+                        <li>
+                            教育部博士点专项科研基金，20120078110002，应急条件下输运保障网络控制与效能研究，2013/1-2016/6/30，经费12万，已结题，参加
+                        </li>
+                    </ol>
+        </div>
 
-    <h2><b>研究经历</b></h2>
-        <h3>发表论文</h3>
-        <hr>
-            <ol>
-                <li>
-                    <b>Yu Xiao#*</b>, Jingti Han. <a href="https://www.sciencedirect.com/science/article/pii/S0040162516000202">Forecasting
-                        new product diffusion with agent-based models.</a> Technological Forecasting & Social Change, 2016(105): 167-178.
-                </li>
-                <li>
-                    <b>肖宇#</b>, 韩景倜. <a href="http://www.cnki.net/kcms/doi/10.13306/j.1672-3813.2016.03.007.html">异质阈值决策规则下的复杂网络扩散</a>[J].
-                        复杂系统与复杂性科学, 2016(3): 47-57.</li>
-                <li>
-                    <b>肖宇#*</b>, 韩景倜, 韩小妹. <a href="http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFDLAST2017&filename=GCXT201704021&uid=WEEvREcwSlJHSldRa1FhcTdWa2JJc0FRK05YYy9sbTFPSFVWdlZwOUlOND0=$9A4hF_YAuvQ5obgVAqNKPCYcEjKensW4IQMovwHtwkF4VYPoHbKxJw!!&v=MjAyMzM0OUhaWVI4ZVgxTHV4WVM3RGgxVDNxVHJXTTFGckNVUkxPZlpPZHJGeXJtVTd2UElpN1Rlckc0SDliTXE=">一种判定多智能体系统状态更新有序性的方法</a>
-                    [J].系统工程, 2017, 35(4): 143- 148.
-                </li>
-                <li>
-                    韩景倜, <b>肖宇*</b>. <a href="http://www.cims-journal.cn/CN/10.13196/j.cims.2015.06.002">复杂产品研发的网络建模分析</a>[J]. 计算机集成制造系统,
-                    2015(6): 1417-1427.
-                </li>
-                <li>
-                    <b>Xiao Y.#*</b>, Han J. (2014) <a href="https://link.springer.com/chapter/10.1007/978-3-642-55355-4_34"> Value Model of Knowledge Diffusion in High Technology Innovation Networks.</a> In: Liu K., Gulliver
-                        S.R., Li W., Yu C. (eds) Service Science and Knowledge Innovation. ICISO 2014. IFIP Advances in Information and
-                        Communication Technology, vol 426: 331-339. Springer, Berlin, Heidelberg
-                </li>
-            </ol>
-        <h3>项目经历</h3>
-        <hr>
-            <ol>
-                <li>
-                    <b>教育部人文社科青年基金项目，18YJC630205，面向创新扩散预测的人工社会构建关键方法研究，2019/1-2021/12，经费8万，在研，主持</b>
-                </li>
-                <li>
-                    上海市哲学社会科学规划一般课题，2018BGL023，创业人才的心智特征及其神经学实验观测研究，2019.01-2020.12，经费8万元，在研，参与
-                </li>
-                <li>
-                    上海市哲学社会科学规划青年课题，2018EGL016，基于线上线下耦合网络的创意源扩散机理及促进策略研究，2019/1-2020/12，经费6万，上海市哲社办，在研，参与
-                </li>
-                <li>
-                    <b>上海高校青年教师培养资助计划项目，ZZSUIBE16009，网络扩散模型的拟合及其在市场增长预测中的应用，2017.01-2018.12，经费4万元，上海市教委，结项，主持</b>
-                </li>
-                <li>
-                    国家自然科学基金青年项目，71602112，资本市场中的社会关系及其经济后果：基于市场参与者个人层面的研究， 2017.01-2019.12，经费17万元，国家自然科学基金委，在研，参与
-                </li>
-                <li>
-                    国家自然科学基金面试项目，71271126，应急保障网络的控制与效能分析， 2013/1-2016/12，经费48万，已结题，参加
-                </li>
-                <li>
-                    教育部博士点专项科研基金，20120078110002，应急条件下输运保障网络控制与效能研究，2013/1-2016/6/30，经费12万，已结题，参加
-                </li>
-            </ol>
-    <ul>
-    </ul>
-    <hr>
-    <h2>所授课程</h2>
-    <ol>
-        <li>
-            数据库原理与设计
-        </li>
-        <li>
-            <a href="Courses/Python-Database-Management/主要内容.html">Python数据库管理技术</a>
-        </li>
-    </ol>
+        <div class="content">
+            <h2>所授课程</h2>
+                <ol>
+                    <li>
+                        数据库原理与设计
+                    </li>
+                    <li>
+                        <a href="Courses/Python-Database-Management/主要内容.html">Python数据库管理技术</a>
+                    </li>
+                </ol>
+        </div>
+
+        <!-- <div class="footer">
+            <h2 style="text-align:left">链接</h2>
+        </div> -->
     </div>
 </body>
 </html>
