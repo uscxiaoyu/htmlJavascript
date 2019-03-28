@@ -1,68 +1,107 @@
-h1 {
-    color: black;
-    font-family: 'Franklin Gothic Medium';
-    font-size: 60px;
+html, body {
+    background-color: #807e78;
+    margin: 10px;
+}
+.container > div {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    line-height: 30pt;
+    font-size: 1.5em;
+    color: rgb(34, 25, 25);
+    padding: 60px;
+    box-shadow:10px 10px 10px #909090;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr; /*分成三等分, 1fr 1fr 1fr*/
+    grid-template-rows: repeat(5, auto);
+    justify-self: center;
+    /* grid-template-areas: 
+        ". m h h h h h ."
+        ". m c c c c c ."
+        ". m c c c c c ."
+        ". m c c c c c ."
+        ". m c c c c c ."
+        ". m f f f f f ."
+        ; */
+    /* grid-auto-rows: minmax(100px, 1fr); */
+    grid-gap: 40px;
+    margin: 0 auto;
+}
+.header{
     text-align: center;
+    align-items: center;
+    grid-column: 2;
+    grid-row: 1;
+    /* grid-area: h; */
+    background-color: ivory;
+}
+/* .header-img{
+    align-items: center;
+    grid-column: 4/-2;
+    grid: row 1;
+    background-image: url(./image/usc_1.jpg) ;
+} */
+/* .menu{
+    grid-area: m;
+    grid-column: 2;
+    grid-row: 1/-2;
+    text-align: center;
+    background-color: ivory;
+} */
+.content{
+    /* grid-area: c; */
+    grid-column: 2;
+    grid-row: auto;
+    background-color: ivory;
+    /* padding: 20px; */
+}
+.footer{
+    /* grid-area: f; */
+    grid-column: 2;
+    grid-row: -1;
+    text-align: center;
+    background-color: ivory;
+}
+.contact{
+    text-align: center;
+}
+h1 {
+    color: rgb(41, 31, 31);
+    font-family: 'Franklin Gothic Medium';
+    font-size: 80px;
+    text-align: left;
 }
 
 h2 {
     background-color: hsl(180, 72%, 41%);
-    line-height: 40px;
-    padding-left: 5px
+    text-align: left;
+    line-height: 70px;
+    padding: 10px;
 }
 
 h3 {
     color:black;
-    font-family: 'Times New Roman', Times, serif;
-    background: rgb(114, 209, 209);
-    line-height: 40px;
-    padding-left: 5px;
-}
-
-tb {
-    text-align: center;
-    background: gray;
-}
-
-ul li {
-    color: black;
-}
-
-p {
-    text-indent: 2pt;
-}
-
-table {
-    background: rgb(233, 226, 226);
-}
-
-.f {
-    color: black;
-}
-
-/*类选择器，全局可有多个*/
-#o {
-    font-size: 20px
-}
-
-/*id选择器，全局id唯一*/
-.container {
-    margin: 0 auto;
-    width: 800px;
-    line-height: 30px;
-}
-
-.contact {
-    text-align: left;
-    /* background: #c7c2c2; */
+    /* font-family: 'Times New Roman', Times, serif; */
+    /* background: rgb(172, 78, 78); */
+    line-height: 60px;
     padding: 10px;
 }
-
+ul,table{
+    background-color: azure;
+    /* margin: 20px; */
+}
+li,tr{
+    margin: 10px;
+}
 a {
     text-decoration: none;
     color: rgb(29, 38, 175);
 }
-
 a:hover {
     color: #636060
+}
+.f{
+    font-family: 'Times New Roman', Times, serif;
 }
