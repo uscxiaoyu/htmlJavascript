@@ -10,7 +10,7 @@
     <!-- <link rel="stylesheet" href="style.css"> -->
     <style>
         html, body {
-            background-color: #afaea8;
+            background-color: #807e78;
             margin: 10px;
         }
         .container > div {
@@ -25,8 +25,8 @@
         }
         .container{
             display: grid;
-            grid-template-columns: repeat(6, 1fr); /*分成三等分, 1fr 1fr 1fr*/
-            grid-template-rows: repeat(7, auto);
+            grid-template-columns: 1fr 6fr 1fr; /*分成三等分, 1fr 1fr 1fr*/
+            grid-template-rows: repeat(5, auto);
             /* grid-template-areas: 
                 ". m h h h h h ."
                 ". m c c c c c ."
@@ -42,8 +42,8 @@
         .header{
             text-align: center;
             align-items: center;
-            grid-column: 2/-2;
-            grid: row 1;
+            grid-column: 2;
+            grid-row: 1;
             /* grid-area: h; */
             background-color: ivory;
         }
@@ -62,13 +62,14 @@
         } */
         .content{
             /* grid-area: c; */
-            grid-column: 2/-2;
+            grid-column: 2;
+            grid-row: auto;
             background-color: ivory;
             /* padding: 20px; */
         }
         .footer{
             /* grid-area: f; */
-            grid-column: 2/-2;
+            grid-column: 2;
             grid-row: -1;
             text-align: center;
             background-color: ivory;
@@ -85,17 +86,34 @@
 
         h2 {
             background-color: hsl(180, 72%, 41%);
-            text-align: center;
-            line-height: 40px;
+            text-align: left;
+            line-height: 70px;
             padding: 10px;
         }
 
         h3 {
             color:black;
-            font-family: 'Times New Roman', Times, serif;
-            background: rgb(114, 209, 209);
-            line-height: 40px;
+            /* font-family: 'Times New Roman', Times, serif; */
+            /* background: rgb(172, 78, 78); */
+            line-height: 60px;
             padding: 10px;
+        }
+        ul,table{
+            background-color: azure;
+            /* margin: 20px; */
+        }
+        li,tr{
+            margin: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: rgb(29, 38, 175);
+        }
+        a:hover {
+            color: #636060
+        }
+        .f{
+            font-family: 'Times New Roman', Times, serif;
         }
             </style>
 </head>
@@ -170,7 +188,7 @@
         <div class="content">
             <h2><b>研究经历</b></h2>
                 <h3>发表论文</h3>
-                    <ol>
+                    <ul>
                         <li>
                             <b>Yu Xiao#*</b>, Jingti Han. <a href="https://www.sciencedirect.com/science/article/pii/S0040162516000202">Forecasting
                                 new product diffusion with agent-based models.</a> Technological Forecasting & Social Change, 2016(105): 167-178.
@@ -191,9 +209,9 @@
                                 S.R., Li W., Yu C. (eds) Service Science and Knowledge Innovation. ICISO 2014. IFIP Advances in Information and
                                 Communication Technology, vol 426: 331-339. Springer, Berlin, Heidelberg
                         </li>
-                    </ol>
+                    </ul>
                 <h3>项目经历</h3>
-                    <ol>
+                    <ul>
                         <li>
                             <b>教育部人文社科青年基金项目，18YJC630205，面向创新扩散预测的人工社会构建关键方法研究，2019/1-2021/12，经费8万，在研，主持</b>
                         </li>
@@ -215,19 +233,19 @@
                         <li>
                             教育部博士点专项科研基金，20120078110002，应急条件下输运保障网络控制与效能研究，2013/1-2016/6/30，经费12万，已结题，参加
                         </li>
-                    </ol>
+                    </ul>
         </div>
 
         <div class="content">
             <h2>所授课程</h2>
-                <ol>
+                <ul>
                     <li>
                         数据库原理与设计
                     </li>
                     <li>
                         <a href="Courses/Python-Database-Management/主要内容.html">Python数据库管理技术</a>
                     </li>
-                </ol>
+                </ul>
         </div>
 
         <!-- <div class="footer">
