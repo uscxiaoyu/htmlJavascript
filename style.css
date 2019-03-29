@@ -7,14 +7,16 @@ html, body {
     justify-content: center;
     align-items: center;
     line-height: 30pt;
-    font-size: 1.5em;
+    font-size: 1.2em;
+    border-radius: 20px;
     color: rgb(34, 25, 25);
-    padding: 60px;
-    box-shadow:10px 10px 10px #909090;
+    padding: 30px;
+    box-shadow: 10px 10px 10px #909090;
+    background-color: #FFFFFF;
 }
 .container{
     display: grid;
-    grid-template-columns: 1fr 5fr 1fr; /*分成三等分, 1fr 1fr 1fr*/
+    grid-template-columns: 1fr 8fr 1fr; /*分成三等分, 1fr 1fr 1fr*/
     grid-template-rows: repeat(5, auto);
     justify-self: center;
     /* grid-template-areas: 
@@ -35,7 +37,7 @@ html, body {
     grid-column: 2;
     grid-row: 1;
     /* grid-area: h; */
-    background-color: ivory;
+    /* background-color: ivory; */
 }
 /* .header-img{
     align-items: center;
@@ -54,7 +56,7 @@ html, body {
     /* grid-area: c; */
     grid-column: 2;
     grid-row: auto;
-    background-color: ivory;
+    /* background-color: ivory; */
     /* padding: 20px; */
 }
 .footer{
@@ -62,7 +64,7 @@ html, body {
     grid-column: 2;
     grid-row: -1;
     text-align: center;
-    background-color: ivory;
+    /* background-color: ivory; */
 }
 .contact{
     text-align: center;
@@ -71,15 +73,31 @@ h1 {
     color: rgb(41, 31, 31);
     font-family: 'Franklin Gothic Medium';
     font-size: 80px;
-    text-align: left;
+    /* text-align: left; */
+    transition: 2s
+}
+
+h1:hover {
+    color: brown;
+    font-family: 'Franklin Gothic Medium';
+    font-size: 80px;
 }
 
 h2 {
     background-color: hsl(180, 72%, 41%);
+    text-align: center;
+    line-height: 70px;
+    border-radius: 10px;
+    padding: 10px;
+    transition: 1s;
+}
+/* h2:hover{
+    background-color: hsl(180, 25%, 92%);
     text-align: left;
     line-height: 70px;
-    padding: 10px;
-}
+    border-radius: 10px;
+    padding: 20px;
+} */
 
 h3 {
     color:black;
@@ -88,13 +106,32 @@ h3 {
     line-height: 60px;
     padding: 10px;
 }
-ul,table{
-    background-color: azure;
+ul{
+    /* background-color: #CCCCCC; */
+    position: relative;
+    color: grey;
+    transition: 1s;
+    border-radius: 10px;
+    margin: 0 auto;
     /* margin: 20px; */
 }
-li,tr{
-    margin: 10px;
+
+ul:hover {
+    background-color: #CCCCCC;
 }
+
+li{
+    list-style-type: none;
+    margin: 20px;
+    line-height: 1.2em;
+    transition: 1s;
+}
+
+li:hover{
+    font-size: 1.2em;
+    color: #990033;
+}
+
 a {
     text-decoration: none;
     color: rgb(29, 38, 175);
@@ -104,4 +141,17 @@ a:hover {
 }
 .f{
     font-family: 'Times New Roman', Times, serif;
+}
+
+.contact {
+    text-align:center;
+}
+
+p {
+    transition: 1s;
+}
+
+p:hover {
+    font-size: 1.2em;
+    color: #990033;
 }

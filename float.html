@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Float</title>
+    <title>浮动窗口</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <script src="main.js"></script>
@@ -13,23 +13,24 @@
             padding: 0;
         }
         .container{
-            margin: 5px auto;
+            margin: 0 auto;
             width: 960px;
-            border: 5px;
         }
         .header{
-            background: rgb(69, 200, 233);
-            height: 60px;
-            margin-left: 100px;
-            margin-right: 100px;
+            position: fixed;
+            width: 100%;
+            top:0;
+            z-index: 10;
+            background-color: rgb(69, 200, 233);
+            height: 80px;
         }
         .header > .container {
             background-color:black;
-            height: 60px;
-            /* margin: 5px; */
+            height: 80px;
         }
         .content{
-            background: grey;
+            /* background: grey; */
+            padding-top: 80px;
         }
         .content > .container{
             background-color: aquamarine;
@@ -38,10 +39,11 @@
         .left{
             background: rgb(172, 78, 78);
             height: 800px;
-            width: 700px;
+            width: 750px;
             float: left;
-            margin-top: 5px;
-            margin-bottom: 5px;
+            border-radius: 20px;
+            margin-top: 10px;
+            margin-bottom: 10px;
         }
         .mid{
             background-color: beige;
@@ -51,24 +53,61 @@
             margin-top: 10px;
         }
         .right {
+            border-radius: 20px;
             background-color: beige;
             float: right;
-            width: 230px;
-            height: 350px;
+            width: 200px;
+            height: 200px;
             margin-top: 10px;
+            z-index: 1;
         }
         .footer{
-            background: blue;
+            background: rgb(69, 200, 233);
             height: 60px;
-            margin-left: 100px;
-            margin-right: 100px;
             clear: both;
         }
         .footer > .container{
-            background: blueviolet;
-            /* margin-bottom: 5px; */
-            /* border: 5px; */
+            background: black;
             height: 60px;    
+        }
+        .circle{
+            position: relative;
+            width: 100px;
+            height: 100px;
+            left: 50px;
+            top: -50px;
+            z-index: 2;
+            background: brown;
+            border-radius: 50%;
+            transition: 1s;
+            transform: rotate(180);
+        }
+        .circle:hover{
+            position: relative;
+            width: 150px;
+            height: 150px;
+            left: 25px;
+            top: -75px;
+            z-index: 2;
+            background: green;
+            border-radius: 20%;
+        }
+
+        #r2{
+            position: relative;
+        }
+
+        @media (max-width:960px) {
+            .left{
+                width: 100%;
+            }
+            .right{
+                width: 100%;
+            }
+            #r2{
+                display: none;
+            }
+
         }
     </style>
 </head>
@@ -80,11 +119,13 @@
     <div class="content">
         <div class="container">
             <div class="left"></div>
-            <div class="right"></div> 
-            <div class="right"></div>
+            <div class="right">右1</div> 
+            <div class="right" id="r2">右2
+                <div class="circle"></div>
+            </div>
         </div>
     </div>
-    
+
     <div class="footer">
         <div class="container"></div>
     </div>
