@@ -7,49 +7,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
     <script src="main.js"></script>
+    <style>
+        html, body{
+            background-color: #807e78;
+            margin: 10px;
+        }
+
+        .container{
+            display: grid;
+            grid-template-columns: auto 900px auto; /*分成三等分, 1fr 1fr 1fr*/
+            grid-template-rows: repeat(2, auto);
+            justify-content: center;
+        }
+        .content, .intro{
+            font-size: 1.1em;
+            grid-column: 2;
+            grid-row: auto;
+            margin: 20px;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 10px;
+        }
+        a {
+        text-decoration: none;
+        color: rgb(29, 38, 175);
+        }
+        a:hover {
+        color: #636060
+        }
+
+    </style>
 </head>
 <body>
-    <h1>
-        课程介绍
-    </h1>
-    <p>数据库是办公自动化系统、信息管理系统和ERP系统的支撑技术之一。Python编程语言是目前最流行的科学计算语言之一，在机器学习、统计分析和深度学习等领域具有应用广泛。
-MySQL由于其性能优越、功能强大，成为最受欢迎的开源数据库之一。本课程将深入讲解关系数据库设计、MySQL基础知识以及MySQL编程知识；
-讲解非关系数据库MongoDB的基本知识与应用；讲解在Python环境下与MySQL和MongoDB进行交互。
-本课程的主要内容包括关系数据库设计、Python基础、MySQL基础、MySQL编程、MongoDB基础等。通过本课程学习，学生可以较好掌握关系数据库与非关系数据库之间的区别，并针对不同应用场景进行选择。
-    </p>
-    <hr>
-    <h1>
-        目录
-    </h1>
-    <ol>
-        <li>
-            <a href="1.创建备份数据库.html">创建与备份MySQL数据库</a>
-        </li>
-        <li>
-            <a href="2.创建与修改表结构.html">创建与修改表结构</a>
-        </li>
-        <li>
-            <a href="3.设置表约束和添加索引.html">设置表约束和添加索引</a>
-        </li>
-        <li>
-            <a href="4.添加数据.html">添加更新删除数据表数据</a>
-        </li>
-        <li>
-            <a href="5.单表查询1.html">基本查询1</a>
-        </li>
-        <li>
-            <a href="6.单表查询2.html">基本查询2</a>
-        </li>
-        <li>
-            <a href="7.多表查询.html">多表查询</a>
-        </li>
-        <li>
-            <a href="8.外键.html">外键</a>
-        </li>
-        <li>
-            <a href="9.视图.html">视图</a>
-        </li>
-    </ol>
-<p align="center"><a href="../../index.html">返回主页</a></p>
+    <div class="container">
+    <div class="intro">
+        <h1 style="text-align:center">
+            Python数据库管理技术
+        </h1>
+        <p>数据库是办公自动化系统、信息管理系统和ERP系统的支撑技术之一。Python编程语言是目前最流行的科学计算语言之一，在机器学习、统计分析和深度学习等领域具有应用广泛。
+    MySQL由于其性能优越、功能强大，成为最受欢迎的开源数据库之一。本课程将深入讲解:
+            <ul>
+                <li>关系数据库设计、MySQL基础知识以及MySQL编程知识；</li>
+                <li>讲解非关系数据库MongoDB的基本知识与应用；讲解在Python环境下与MySQL和MongoDB进行交互。</li>
+            </ul>
+        本课程的主要内容包括<strong>关系数据库设计、Python基础、MySQL基础、MySQL编程、MongoDB基础等</strong>。通过本课程学习，学生可以较好掌握关系数据库与非关系数据库之间的区别，并针对不同应用场景进行选择。
+        </p>
+    </div>
+
+    <div class="content">
+        <h1 style="text-align:center">
+            目  录
+        </h1>
+        <ol>
+            <li>
+                <a href="1.创建备份数据库.html">创建与备份MySQL数据库</a>
+            </li>
+            <li>
+                <a href="2.创建与修改表结构.html">创建与修改表结构</a>
+            </li>
+            <li>
+                <a href="3.设置表约束和添加索引.html">设置表约束和添加索引</a>
+            </li>
+            <li>
+                <a href="4.添加数据.html">添加更新删除数据表数据</a>
+            </li>
+            <li>
+                <a href="5.单表查询1.html">基本查询1</a>
+            </li>
+            <li>
+                <a href="6.单表查询2.html">基本查询2</a>
+            </li>
+            <li>
+                <a href="7.多表查询.html">多表查询</a>
+            </li>
+            <li>
+                <a href="8.外键.html">外键</a>
+            </li>
+            <li>
+                <a href="9.视图.html">视图</a>
+            </li>
+        </ol>
+    <p align="center"><a href="../../index.html">返回主页</a></p>
+    </div>
+    </div>
 </body>
 </html>
