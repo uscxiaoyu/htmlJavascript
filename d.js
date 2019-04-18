@@ -6,3 +6,8 @@ function rand_n(n) {
         };
     };
 };
+
+for (let j=1; j<10; j++) {
+    document.write(rand_n(5));
+    document.write("<br>")
+}
