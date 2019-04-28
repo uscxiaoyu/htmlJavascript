@@ -5,9 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        #thebox {
+            position: relative;
+            left: 200px;
+            right: 200px;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        };
+    </style>
 </head>
 <body>
-    
+    <div class="header">
+        <div class="info">
+            <h1 style="margin-right:50%">肖 宇</h1>
+            <hr>
+            <p>管理学博士<br>上海对外经贸大学信息管理系 副教授</p>
+            <p>021-67703578<br>jxndtbxiaoyu@163.com</p>
+        </div>
+        <div class="headimg">
+            <img src="./image/usc_1.JPG" alt="此处应该有头像" , width="100%">
+        </div>
+    </div>
+    <div class="content">
+        <h2><b>工作经历</b></h2><br>
+        <ul id="job">
+            <li>
+                2019-01-01至今, 上海对外经贸大学, 信息管理系, 副教授
+            </li>
+            <li>
+                2015-09-10至2018-12-31, 上海对外经贸大学, 信息管理系, 讲师
+            </li>
+        </ul>
+    </div>
+    <div class="content">
+        <h2 style="color:black"><b>教育背景</b></h2><br>
+        <ul type="circle">
+            <li>
+                2011-09-01至2015-06-31, 上海财经大学, 管理学博士, 导师: 韩景倜教授
+            </li>
+            <li>
+                2013-10-01至2014-09-31, University of Southern California, Visiting scholar, Supervisor: Pro. Thomas W.
+                Valente
+            </li>
+            <li>
+                2009-09-01至2011-06-31, 上海财经大学, 管理学硕士, 导师: 李艳红副教授
+            </li>
+            <li>
+                2005-09-1至2009-06-31, 杭州电子科技大学, 管理学学士, 导师: 周涛教授
+            </li>
+        </ul>
+    </div>
+    <div>
+        <textarea name="a" id="input" cols="40" rows="20"></textarea>
+        <div id="output"></div>
+    </div>
+    <div id="thebox" style="top:200px;left: 200px;"></div>
+    </div>
+
 </body>
 <script src="./d.js"></script>
 </html>
