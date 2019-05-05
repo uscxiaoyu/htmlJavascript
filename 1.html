@@ -33,12 +33,20 @@
             padding: 0; 
         }
         #navigator li ul li ul {
-            position: relative;
+            position: absolute;
             top: 0px;
             left: 121px;
             margin: 0;
             padding: 0
         }
+        #navigator li ul li ul li ul {
+            position: absolute;
+            top: 0px;
+            left: 121px;
+            margin: 0;
+            padding: 0
+        }
+
         #navigator li ul {
             display: none;
         }
@@ -46,7 +54,7 @@
     </style>
 </head>
 <body>
-    <ul id='navigagor'>
+    <ul id='navigator'>
         <li>
             <a href="#">栏目1</a>
             <ul>
@@ -55,20 +63,38 @@
                 <li><a href="#">栏目1->菜单3</a></li>
             </ul>
         </li>
-    </ul>
-
-    <ul>
-
+        <li>
+            <a href="#">栏目2</a>
+            <ul>
+                <li>
+                    <a href="#">栏目2->菜单1</a>
+                    <ul>
+                        <li>
+                            <a href="#">项目1</a>
+                            <ul>
+                                <li><a href="#">列表1</a></li>
+                                <li><a href="#">列表2</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">项目2</a></li>
+                        <li><a href="#">项目3</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">栏目2->菜单2</a></li>
+                <li><a href="#">栏目2->菜单3</a></li>
+                <li><a href="#">栏目2->菜单4</a></li>
+            </ul>
+        </li>
     </ul>
 </body>
 <script>
     function displaySubMenu() {
-        var subMenu = this.getElememtsByTagName("ul")[0];
+        var subMenu = this.getElementsByTagName("ul")[0];
         subMenu.style.display = "block";
     };
     function hideSubMenu(){
-        var subMenu = this.getElememtsByTagName("ul")[0];
-        subMenu.style.display = none;
+        var subMenu = this.getElementsByTagName("ul")[0];
+        subMenu.style.display = "none";
     }
 
     let lis = document.querySelectorAll("#navigator li");
@@ -76,7 +102,7 @@
         for (let c of li.children) {
             if (c.tagName == "UL") {
                 li.addEventListener("mouseover", displaySubMenu);
-                li.addEventListener("mouseout", displaySubMenu);
+                li.addEventListener("mouseout", hideSubMenu);
                 break;
             }
         }  

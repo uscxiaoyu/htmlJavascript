@@ -7,7 +7,7 @@
     <title>Document</title>
     <style>
         .active {
-            background-color: bisque;
+            background-color: blueviolet;
         }
         #nav {
             position: fixed;
@@ -17,9 +17,9 @@
 </head>
 <body>
     <ul id="nav">
-        <li><a href="#1">11111</a></li>
-        <li><a href="#2">22222</a></li>
-        <li><a href="#3">33333</a></li>
+        <li><a href="#1" class="active">11111</a></li>
+        <li><a href="#2" class="">22222</a></li>
+        <li><a href="#3" class="">33333</a></li>
     </ul>
     <h1 class="title" id="1">1111</h1>
         <p>afjoeajfoawjefajw jafoejafoejao jojojfoaefijaweofj afjoejafoiajwei</p>
@@ -123,13 +123,13 @@
 <script>
     let titles = document.querySelectorAll(".title");
     let navs = document.querySelectorAll("#nav a");
-    document.body.onscroll = () => {
+    document.body.onscroll = ()=>{
         let top = document.documentElement.scrollTop;
         for (let title of titles) {
             if (title.offsetTop >= top) {
                 for (let a of navs) {
                     let href = a.href.split("#")[1];
-                    if (title.id == a.href){
+                    if (title.id == href){
                         a.className = "active";
                     } else {
                         a.className = "";
