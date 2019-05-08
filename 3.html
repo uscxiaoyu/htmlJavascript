@@ -90,26 +90,52 @@
         window.onload = function () {
             var width = 600;
             var list = document.getElementById("list");
+            var butn = document.querySelectorAll("#buttons span")
             var prev = document.getElementById("prev");
             var next = document.getElementById("next");
             var num = list.children.length; // get img number
+
             function animate(offset) {
                 var left = list.style.left ? parseInt(list.style.left) : 0;
                 var newLeft = left - offset * width;
                 list.style.left = newLeft + "px";
-                if (newLeft <= -num * width) {
+                if (newLeft <= -num * width) { // get the largest width
                     list.style.left = "0px";
                 }
                 if (newLeft > 0) {
-                    list.style.left = -(num - 1) * width + "px";
+                    list.style.left = -(num - 1) * width + "px";  // transfer to the largest width
                 }
+                
+                var idx = Math.ceil(Math.abs(parseInt(list.style.left)/(offset*width)));
+                document.getElementsByClassName('on')[0].className = 'off';
+                butn[idx].className = 'on';
             }
+
+            var auto = setInterval(animate, 2000, 1);
+            var cont = document.getElementById("container");
+            cont.onmouseover = function () {
+                clearInterval(auto);
+            }
+            cont.onmouseout = function () {
+                auto = setInterval(animate, 2000, 1);  // 全局变量
+            }
+
             prev.onclick = function() {
                 animate(-1);
             };
             next.onclick = function() {
                 animate(1);
             };
+
+
+            for (let bt of butn) {
+                bt.onclick = function() {
+                    var idx = parseInt(bt.getAttribute("index"));
+                    document.getElementsByClassName('on')[0].className = 'off';
+                    bt.className = 'on';
+                    list.style.left = -(idx - 1) * width + "px";
+                }
+            }
         };
     </script>
 </head>
@@ -123,9 +149,9 @@
         </div>
         <div id="buttons">
             <span index="1" class="on"></span>
-            <span index="2"></span>
-            <span index="3"></span>
-            <span index="4"></span>
+            <span index="2" class="off"></span>
+            <span index="3" class="off"></span>
+            <span index="4" class="off"></span>
         </div>
         <a href="javascript:;" id="prev" class="arrow">&lt;</a>
         <a href="javascript:;" id="next" class="arrow">&gt;</a>
