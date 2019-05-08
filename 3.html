@@ -65,7 +65,7 @@
             text-align: center;
             color: #fff;
             background-color: RGBA(0, 0, 0, 0.3);
-            cursor: pointer;
+            cursor:pointer;
         }
 
         .arrow:hover {
@@ -127,7 +127,6 @@
                 animate(1);
             };
 
-
             for (let bt of butn) {
                 bt.onclick = function() {
                     var idx = parseInt(bt.getAttribute("index"));
@@ -142,10 +141,10 @@
 <body>
     <div id="container">
         <div id="list">
-            <img src="img/1.jpg"></img>
-            <img src="img/2.jpg"></img>
-            <img src="img/3.jpg"></img>
-            <img src="img/4.jpg"></img>
+            <img index="1" src="img/1.jpg"></img>
+            <img index="2" src="img/2.jpg"></img>
+            <img index="3" src="img/3.jpg"></img>
+            <img index="4" src="img/4.jpg"></img>
         </div>
         <div id="buttons">
             <span index="1" class="on"></span>
