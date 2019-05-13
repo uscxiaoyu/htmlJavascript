@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>画布</title>
+</head>
+<body>
+</body>
+<script>
+    let c1 = document.createElement("canvas");
+    c1.width = 200;
+    c1.height = 100;
+    let context = c1.getContext("2d");
+    context.fillStyle = "#FF0000";
+    context.fillRect(0, 0, 150, 75);  // 左上角(0, 0)， 往右x变大，往下y变大 
+    context.fillRect(150, 75, 200, 100);
+    document.body.appendChild(c1)
+
+    let c2 = document.createElement("canvas");
+    c2.width = 200;
+    c2.height = 100;
+    c2.style.backgroundColor = '#999999';
+    
+    var ctx = c2.getContext('2d');
+    ctx.fillStyle = '#FF0000';
+    ctx.strokeStyle = 'blue';
+
+    ctx.beginPath();
+    ctx.moveTo(70, 18);
+    ctx.arc(70, 18, 15, Math.PI * 0, Math.PI*1);
+    // c2.style.backgroundColor = '#000000';
+    // ctx.arc(70, 18, 15, Math.PI * 0.5, Math.PI*1);
+    ctx.closePath()
+    ctx.fill();
+
+    ctx.fillText("hello world", 10, 30);
+
+    document.body.appendChild(c2);
+
+    let c3 = document.createElement("canvas")
+    c3.width = 800;
+    c3.height = 600;
+    c3.style.backgroundColor = '#999999';
+
+    var cxt = c3.getContext('2d')
+
+    var cx = c3.width/2;
+    var cy = c3.height/2;
+    var r = 200;
+    var data_set = [
+        {title: "apple", value: 24, color: "green"},
+        {title: "三星", value: 26, color: "yellow"},
+        {title: "华为", value: 13, color: "orange"},
+        {title: "锤子", value: 17, color: "red"},
+        {title: "小米", value: 8, color: "purple"},
+        {title: "其它", value: 12, color: "cyan"}
+    ];
+
+    // 对比例标准化
+    function normalize (data_set) {
+        var sum_value = 0;
+        for (let data of data_set) {
+            sum_value += data.value;
+        }
+
+        for (let i=0;  i < data_set.length; i++) {
+            data_set[i].value = data_set[i].value / sum_value;
+        }
+        return data_set
+    }
+
+    var data_set = normalize(data_set);
+    var count = 0.1;
+    for (let i = 0; i < data_set.length; i++) {
+        data = data_set[i];
+        cxt.fillStyle = data.color;
+        cxt.beginPath();
+        cxt.moveTo(cx, cy);
+        cxt.arc(cx, cy, r, 2 * Math.PI * count, 2 * Math.PI * (count + data.value));
+        cxt.closePath()
+        cxt.fill();
+        let angle = (count + data.value/2) * 2 * Math.PI;
+        if (angle < Math.PI/2 || angle> 3*Math.PI/2) {
+            cxt.textAlign = 'start';
+        } else {
+            cxt.textAlign = 'end';
+        }
+        
+        let text_x = cx + Math.cos(angle) * r;
+        let text_y = cy + Math.sin(angle) * r;
+        cxt.fillText(`${data.title} ${data.value}`, text_x + 10, text_y + 5);
+        count += data.value;
+    }
+
+    document.body.appendChild(c3);
+
+</script>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>饼图</title>
+    <style>
+        canvas {
+            position: relative;
+            cursor: pointer;
+            border: 2px solid black;
+            background: burlywood;
+        }
+    </style>
+</head>
+<body>
+</body>
+<script>
+    let c1 = document.createElement("canvas")
+    c1.width = 800;
+    c1.height = 600;
+    c1.style.backgroundColor = 'grey';
+
+    var cxt = c1.getContext('2d')
+
+    var cx = c1.width/2;
+    var cy = c1.height/2;
+    var r = 200;
+    var data_set = [
+        {title: "apple", value: 24, color: "green"},
+        {title: "三星", value: 26, color: "yellow"},
+        {title: "华为", value: 13, color: "orange"},
+        {title: "锤子", value: 17, color: "red"},
+        {title: "小米", value: 8, color: "purple"},
+        {title: "其它", value: 12, color: "cyan"}
+        ];
+
+    // 对比例标准化
+    function normalize (data_set) {
+        var sum_value = 0;
+        for (let data of data_set) {
+            sum_value += data.value;
+            }
+
+        for (let i=0; i < data_set.length; i++) { 
+            data_set[i].value=data_set[i].value / sum_value;
+            }
+
+        return data_set;}
+
+    var data_set = normalize(data_set);
+    var count = 0.1;  // 初始比例，为了饼图更加美观
+    var arc_array = [2 * Math.PI * count];  // 各弧之间的分割
+
+    for (let i = 0; i < data_set.length; i++) { 
+        var data = data_set[i]
+        count += data.value;
+        arc_array.push(2 * Math.PI * count);
+    }
+
+    function drawArc(i, radius, data_set, arc_array){
+        var data = data_set[i];
+        cxt.fillStyle = data.color;
+        cxt.beginPath();
+        cxt.moveTo(cx, cy);
+        cxt.arc(cx, cy, radius, arc_array[i], arc_array[i + 1]);
+        cxt.closePath();
+        cxt.fill();
+
+        // 绘制文字
+        let angle = (arc_array[i] + arc_array[i + 1]) / 2;
+        let text_x = cx + Math.cos(angle) * radius;
+        let text_y = cy + Math.sin(angle) * radius;
+
+        if (angle < Math.PI / 2 || angle > 3 * Math.PI / 2) {
+            cxt.textAlign = 'start';
+        } else {
+            cxt.textAlign = 'end';
+        }
+
+        cxt.fillText(`${data.title} ${data.value * 100}%`,
+            text_x + 5 * Math.sign(Math.cos(angle)),
+            text_y + 5 * Math.sign(Math.sin(angle)));
+    }
+
+    function getArc(x, y) {
+        if (x == cx || y == cy) {
+            return 0;
+        } else if (x > cx && y > cy) {
+            return Math.atan((y - cy) / (x - cx));
+        } else if (x < cx && y > cy) {
+            return Math.PI - Math.atan((y - cy) / (cx - x));
+        } else if (x < cx && y < cy) {
+            return Math.PI + Math.atan((cy - y) / (cx - x));
+        } else if (x > cx && y < cy) {
+            return 2 * Math.PI - Math.atan((cy - y) / (x - cx));
+        }
+    }
+
+    function getDis(x, y) {
+        return Math.sqrt((x - cx) ** 2 + (y - cy) ** 2);
+    }
+
+    function getDraw(arc) {
+        for (let i = 1; i <= arc_array.length; i++) {
+            if (arc < arc_array[0]) {
+                var arc = arc + 2 * Math.PI;
+            }
+            if (arc >= arc_array[i - 1] && arc <= arc_array[i]) {
+                return [i - 1, arc_array[i - 1], arc_array[i]];
+            }
+        }
+    }
+
+    // 初始图片
+    for (let i=0; i < data_set.length; i++) { 
+        drawArc(i, r, data_set, arc_array);
+        }
+
+    c1.onmousemove = (event) => {
+        var x = event.offsetX;
+        var y = event.offsetY;
+        var dis = getDis(x, y);
+        var arc = getArc(x, y);
+        var cont = getDraw(arc);
+        var idx = cont[0];
+        cxt.clearRect(0, 0, c1.width, c1.height);
+        for (let i = 0; i < data_set.length; i++) { 
+            if (i == idx && dis < r) {
+                cxt.shadowColor = 'grey';
+                cxt.shadowOffsetX = 2;
+                cxt.shadowOffsetY = 2;
+                drawArc(i, 1.02*r, data_set, arc_array);
+            } else {
+                cxt.shadowOffsetX = 0;
+                cxt.shadowOffsetY = 0;
+                drawArc(i, r, data_set, arc_array);
+            }
+        }
+    }
+
+    document.body.appendChild(c1);
+
+    // let c2 = document.createElement("canvas");
+    // c2.height = 600;
+    // c2.width = 800;
+    // c2.style.backgroundColor = '#ffffff';
+    // c2.style.opacity = 0.5;
+
+    // var left = c2.offsetLeft;
+    // var top = c2.offsetTop;
+    // cxt2 = c2.getContext("2d"); 
+    // c2.onmousemove = function getMousePos(event) {
+    //         var x = event.offsetX;
+    //         var y = event.offsetY;
+    //         cxt2.clearRect(0, 0, c2.width, c2.height);
+    //         cxt2.fillText(`x: ${x}, y: ${y}`, x, y);
+    //     };
+    
+    // cxt2 = c2.getContext("2d")
+    // c2.onmousemove = (event) => {
+    //         var x = event.offsetX;
+    //         var y = event.offsetY;
+    //         var dis = getDis(x, y);
+    //         var arc = getArc(x, y);
+    //         var cont = getDraw(arc);
+    //         var idx = cont[0];
+    //         cxt2.clearRect(0, 0, c2.width, c2.height);
+    //         if (dis < r) {
+    //             cxt2.fillStyle = data_set[idx].color;
+    //             cxt2.beginPath();
+    //             cxt2.moveTo(cx, cy);
+    //             cxt2.arc(cx, cy, 1.01 * r, cont[1], cont[2]);
+    //             cxt2.closePath();
+    //             cxt2.fill();
+    //         }   
+    //     };
+    
+    
+    // document.body.appendChild(c2);
+
+</script>
+</html>

@@ -17,7 +17,7 @@ html, body {
 .container{
     display: grid;
     grid-template-columns: auto 900px auto; /*分成三等分, 1fr 1fr 1fr*/
-    grid-template-rows: repeat(5, auto);
+    grid-template-rows: repeat(6, auto);
     justify-content: center;
     /* grid-template-areas: 
         ". m h h h h h ."
@@ -176,6 +176,6 @@ p:hover {
 }
 
 hr {
-    border-style:dashed;
+    border-style: dashed;
     color: lightseagreen
 }
