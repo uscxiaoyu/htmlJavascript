@@ -17,10 +17,10 @@
 <body>
 </body>
 <script>
-    let c1 = document.createElement("canvas")
+    var c1 = document.createElement("canvas")
     c1.width = 800;
     c1.height = 600;
-    c1.style.backgroundColor = 'grey';
+    c1.style.backgroundColor = '#D4D4D4';
 
     var cxt = c1.getContext('2d')
 
@@ -29,14 +29,14 @@
     var r = 200;
     var data_set = [
         {title: "apple", value: 24, color: "green"},
-        {title: "三星", value: 26, color: "yellow"},
+        {title: "三星", value: 26, color: "#B23AEE"},
         {title: "华为", value: 13, color: "orange"},
         {title: "锤子", value: 17, color: "red"},
-        {title: "小米", value: 8, color: "purple"},
-        {title: "其它", value: 12, color: "cyan"}
+        {title: "小米", value: 8, color: "#0000AA"},
+        {title: "其它", value: 12, color: "#7D9EC0"}
         ];
 
-    // 对比例标准化
+    // 标准化为百分比
     function normalize (data_set) {
         var sum_value = 0;
         for (let data of data_set) {
@@ -59,6 +59,7 @@
         arc_array.push(2 * Math.PI * count);
     }
 
+    // 画弧，在特定位置写文字
     function drawArc(i, radius, data_set, arc_array){
         var data = data_set[i];
         cxt.fillStyle = data.color;
@@ -80,10 +81,11 @@
         }
 
         cxt.fillText(`${data.title} ${data.value * 100}%`,
-            text_x + 5 * Math.sign(Math.cos(angle)),
-            text_y + 5 * Math.sign(Math.sin(angle)));
+            text_x + 10 * Math.sign(Math.cos(angle)),
+            text_y + 10 * Math.sign(Math.sin(angle)));
     }
 
+    // 获取指定点与(cx, cy)形成的直线与x轴的夹角
     function getArc(x, y) {
         if (x == cx || y == cy) {
             return 0;
@@ -98,10 +100,12 @@
         }
     }
 
+    // 获取(x, y) 到 (cx, cy)的欧式距离
     function getDis(x, y) {
         return Math.sqrt((x - cx) ** 2 + (y - cy) ** 2);
     }
 
+    // 获取绘画数据
     function getDraw(arc) {
         for (let i = 1; i <= arc_array.length; i++) {
             if (arc < arc_array[0]) {
@@ -131,10 +135,14 @@
                 cxt.shadowColor = 'grey';
                 cxt.shadowOffsetX = 2;
                 cxt.shadowOffsetY = 2;
+                cxt.shadowBlur = 10;
+                cxt.shadowColor = '#B5B5B5';
                 drawArc(i, 1.02*r, data_set, arc_array);
             } else {
                 cxt.shadowOffsetX = 0;
                 cxt.shadowOffsetY = 0;
+                cxt.shadowBlur = 0;
+                cxt.shadowColor = '';
                 drawArc(i, r, data_set, arc_array);
             }
         }
