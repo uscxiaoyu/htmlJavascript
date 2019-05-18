@@ -50,7 +50,7 @@
         return data_set;}
 
     var data_set = normalize(data_set);
-    var count = 0.1;  // 初始比例，为了饼图更加美观
+    var count = 0.15;  // 初始比例，为了饼图更加美观
     var arc_array = [2 * Math.PI * count];  // 各弧之间的分割
 
     for (let i = 0; i < data_set.length; i++) { 
@@ -149,44 +149,6 @@
     }
 
     document.body.appendChild(c1);
-
-    // let c2 = document.createElement("canvas");
-    // c2.height = 600;
-    // c2.width = 800;
-    // c2.style.backgroundColor = '#ffffff';
-    // c2.style.opacity = 0.5;
-
-    // var left = c2.offsetLeft;
-    // var top = c2.offsetTop;
-    // cxt2 = c2.getContext("2d"); 
-    // c2.onmousemove = function getMousePos(event) {
-    //         var x = event.offsetX;
-    //         var y = event.offsetY;
-    //         cxt2.clearRect(0, 0, c2.width, c2.height);
-    //         cxt2.fillText(`x: ${x}, y: ${y}`, x, y);
-    //     };
-    
-    // cxt2 = c2.getContext("2d")
-    // c2.onmousemove = (event) => {
-    //         var x = event.offsetX;
-    //         var y = event.offsetY;
-    //         var dis = getDis(x, y);
-    //         var arc = getArc(x, y);
-    //         var cont = getDraw(arc);
-    //         var idx = cont[0];
-    //         cxt2.clearRect(0, 0, c2.width, c2.height);
-    //         if (dis < r) {
-    //             cxt2.fillStyle = data_set[idx].color;
-    //             cxt2.beginPath();
-    //             cxt2.moveTo(cx, cy);
-    //             cxt2.arc(cx, cy, 1.01 * r, cont[1], cont[2]);
-    //             cxt2.closePath();
-    //             cxt2.fill();
-    //         }   
-    //     };
-    
-    
-    // document.body.appendChild(c2);
 
 </script>
 </html>
